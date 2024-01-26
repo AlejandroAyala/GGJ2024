@@ -625,6 +625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 29839765549564743}
+  - component: {fileID: 573479924326692358}
   m_Layer: 5
   m_Name: CardProto
   m_TagString: Untagged
@@ -639,7 +640,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4893186072980258863}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -652,6 +653,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 440, y: 670}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &573479924326692358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893186072980258863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64314c7cd6d8fb34e88c61873e3d5b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardInfo: {fileID: 0}
+  title: {fileID: 7053057843459182729}
+  desc: {fileID: 3377949093931980058}
+  effectText: {fileID: 4112018606747390552}
+  damage: {fileID: 2949504775507596052}
+  energy: {fileID: 6689530426619673142}
+  cardImage: {fileID: 4339635685242089154}
 --- !u!1 &5953303334375416403
 GameObject:
   m_ObjectHideFlags: 0
