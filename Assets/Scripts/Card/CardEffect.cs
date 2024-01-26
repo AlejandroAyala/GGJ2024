@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CardEffect
 {
-    public string descriptions;
+    public string description;
     public Type type;
     public float applyAmmount;
     public ApplyType applyType;

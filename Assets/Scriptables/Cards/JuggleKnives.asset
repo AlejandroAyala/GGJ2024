@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
   m_Name: JuggleKnives
   m_EditorClassIdentifier: 
-  cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
-  cardDescription:
+  cardName: Juggle Dull Knives
+  cardDescriptions:
   - You masterfully juggle dull knives, altough sharp knives would have been more
     impresive
-  cardName: Juggle Dull Knives
+  energyCost: 2
+  cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
   cardImage: {fileID: 21300000, guid: a42bb582b5628554293aff7ad047b616, type: 3}
   cardEffects:
-  - descriptions: 'Effect: inflict 10 amusement to the enemy'
+  - description: 'Effect: Inflict 10 amusement to the target'
     type: 0
     applyAmmount: 10
+    applyType: 0
