@@ -6,6 +6,7 @@ using UnityEngine;
 public class CardScriptable : ScriptableObject
 {
     public CardTypeScriptable cardType;
+    public string[] cardDescription;
     public string cardName;
     public Sprite cardImage;
     public CardEffect[] cardEffects;
