@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Canvas canvas;
+    public Canvas canvas; 
+    public GameObject panel;
     public GameObject cardPrefab;
     public Queue<Card> cardPool = new Queue<Card>();
 
     private void OnEnable()
     {
         canvas = GetComponent<Canvas>();
-
     }
 
     public Card InstantiateCard(CardScriptable card)
@@ -19,7 +19,7 @@ public class UIManager : Singleton<UIManager>
         Card c = null;
         if (cardPool.Count == 0)
         {
-            c = Instantiate(cardPrefab, canvas.transform).GetComponent<Card>();
+            c = Instantiate(cardPrefab, panel.transform).GetComponent<Card>();
             c.GetComponent<Card>().SetCardInfo(card);
         }
         else

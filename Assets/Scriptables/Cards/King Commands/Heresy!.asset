@@ -17,7 +17,7 @@ MonoBehaviour:
   - That is some witchcraft!
   energyCost: 1
   cardType: {fileID: 11400000, guid: 4369535c48fd9e94fbea144dc998d91a, type: 2}
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 95416885, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Play this card to vanish it from the deck
     type: 0
