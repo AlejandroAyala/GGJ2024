@@ -11,5 +11,4 @@ public class CardScriptable : ScriptableObject
     public CardTypeScriptable cardType;
     public Sprite cardImage;
     public CardEffect[] cardEffects;
-    
 }

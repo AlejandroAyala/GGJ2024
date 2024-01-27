@@ -34,6 +34,7 @@ public class DeckManager : Singleton<DeckManager>
             activeHand.Add(c);
             currentBattleDeck.RemoveAt(0);
         }
+
     }
 
     public void AddToDiscardPile(CardScriptable card)

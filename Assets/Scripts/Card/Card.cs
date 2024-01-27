@@ -21,6 +21,10 @@ public class Card : MonoBehaviour
     [SerializeField]
     public UnityEngine.UI.Image cardImage;
     public UnityEngine.UI.Button button;
+    public Vector3 ogPos;
+    public Vector3 target;
+
+    public Coroutine currentC;
 
     private void Awake()
     {
@@ -53,6 +57,7 @@ public class Card : MonoBehaviour
         energy.text = card.energyCost.ToString();
         cardImage.sprite = card.cardImage;
         gameObject.SetActive(true);
+        ogPos = transform.position;
     }
 
     public void PlayCard()
@@ -65,6 +70,19 @@ public class Card : MonoBehaviour
         //play animation
         DeckManager.Instance.AddToDiscardPile(cardInfo);
         UIManager.Instance.ReturnCardToQueue(this);
+    }
+
+    public void MoveCard()
+    {
+        Vector3 newPos = new Vector3(ogPos.x, ogPos.y, ogPos.z);
+        target = ogPos + (Vector3.up * 50f);
+        transform.position = target;
+    }
+
+    public void ResetCardPosition()
+    {
+        target = ogPos;
+        transform.position = target;
     }
 
 
