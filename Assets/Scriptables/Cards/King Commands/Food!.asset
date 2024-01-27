@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Food!
   m_EditorClassIdentifier: 
   cardName: Food!
-  cardDescriptions: []
+  cardDescriptions:
+  - That looks delicious
   energyCost: 1
   cardType: {fileID: 11400000, guid: 4369535c48fd9e94fbea144dc998d91a, type: 2}
   cardImage: {fileID: 0}

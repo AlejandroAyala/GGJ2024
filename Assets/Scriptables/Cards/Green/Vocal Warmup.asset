@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Vocal Warmup
   m_EditorClassIdentifier: 
   cardName: Vocal Warmup
-  cardDescriptions: []
+  cardDescriptions:
+  - There is not much you can do with that voice.
   energyCost: 2
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
   cardImage: {fileID: 0}

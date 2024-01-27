@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Guards!
   m_EditorClassIdentifier: 
   cardName: Guards!
-  cardDescriptions: []
+  cardDescriptions:
+  - The most elite guards of the Kingdom.
   energyCost: 1
   cardType: {fileID: 11400000, guid: 4369535c48fd9e94fbea144dc998d91a, type: 2}
   cardImage: {fileID: 0}

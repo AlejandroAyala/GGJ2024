@@ -20,9 +20,12 @@ public class Card : MonoBehaviour
     public TMPro.TextMeshProUGUI energy;
     [SerializeField]
     public UnityEngine.UI.Image cardImage;
+    public UnityEngine.UI.Button button;
 
     private void Awake()
     {
+        button = GetComponent<UnityEngine.UI.Button>();
+        button.onClick.AddListener(PlayCard);
         gameObject.SetActive(false);
     }
 
