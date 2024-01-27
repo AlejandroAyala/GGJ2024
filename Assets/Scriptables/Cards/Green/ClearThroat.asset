@@ -17,7 +17,7 @@ MonoBehaviour:
   - Carefull you dont want to choke
   energyCost: 1
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -1885836264, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Next Verbal Comedy card does 2x damage
     type: 1

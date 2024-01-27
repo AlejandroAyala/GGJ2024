@@ -18,7 +18,7 @@ MonoBehaviour:
     are gonna love it!
   energyCost: 1
   cardType: {fileID: 11400000, guid: f249006b8fbcd2844ad853ecd4b590cb, type: 2}
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 1862077988, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: 'Effect: Inflict amusement to the target'
     type: 0
