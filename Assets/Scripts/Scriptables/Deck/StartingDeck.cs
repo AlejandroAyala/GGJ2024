@@ -6,5 +6,7 @@ using UnityEngine;
 public class StartingDeck : ScriptableObject
 {
     [SerializeField]
-    public SerializableDictionary<CardScriptable, int> startingCards;
+    public List<CardScriptable> startingCards;
+    [SerializeField]
+    public List<int> cardQuantity;
 }
