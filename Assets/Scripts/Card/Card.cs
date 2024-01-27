@@ -20,6 +20,8 @@ public class Card : MonoBehaviour
     public TMPro.TextMeshProUGUI energy;
     [SerializeField]
     public UnityEngine.UI.Image cardImage;
+    [SerializeField]
+    public UnityEngine.UI.Image cardArt;
     public UnityEngine.UI.Button button;
     public Vector3 ogPos;
     public Vector3 target;
@@ -56,8 +58,8 @@ public class Card : MonoBehaviour
         }
         energy.text = card.energyCost.ToString();
         cardImage.sprite = card.cardImage;
+        cardArt.color = card.cardType.cardColor;
         gameObject.SetActive(true);
-        ogPos = transform.position;
     }
 
     public void PlayCard()
@@ -74,15 +76,13 @@ public class Card : MonoBehaviour
 
     public void MoveCard()
     {
-        Vector3 newPos = new Vector3(ogPos.x, ogPos.y, ogPos.z);
-        target = ogPos + (Vector3.up * 50f);
-        transform.position = target;
+        ogPos = transform.position;
+        transform.position = new Vector3(ogPos.x, ogPos.y, ogPos.z)+(Vector3.up*200f);
     }
 
     public void ResetCardPosition()
     {
-        target = ogPos;
-        transform.position = target;
+        transform.position = ogPos;
     }
 
 

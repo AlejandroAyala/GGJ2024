@@ -673,7 +673,7 @@ MonoBehaviour:
   effectText: {fileID: 4112018606747390552}
   damage: {fileID: 2949504775507596052}
   energy: {fileID: 6689530426619673142}
-  cardImage: {fileID: 4339635685242089154}
+  cardImage: {fileID: 2701484161724215433}
   button: {fileID: 0}
   ogPos: {x: 0, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
