@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
+  m_Name: ClearThroat
+  m_EditorClassIdentifier: 
+  cardName: Clear Throat
+  cardDescriptions: []
+  energyCost: 1
+  cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
+  cardImage: {fileID: 0}
+  cardEffects:
+  - description: Next Verbal Comedy card does 2x damage
+    type: 1
+    applyAmmount: 200
+    applyType: 1

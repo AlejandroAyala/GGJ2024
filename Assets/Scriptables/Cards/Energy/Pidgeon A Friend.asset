@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
+  m_Name: Pidgeon A Friend
+  m_EditorClassIdentifier: 
+  cardName: Pidgeon A Friend
+  cardDescriptions:
+  - Not the best lifeline available, but it's better than nothing
+  - 'Fun fact: Telephones weren''t a thing during the medieval era'
+  - It will be tough having recption on the medieval era
+  energyCost: 1
+  cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
+  cardImage: {fileID: 0}
+  cardEffects:
+  - description: Next turn, gain 1 Energy
+    type: 4
+    applyAmmount: 1
+    applyType: 0
