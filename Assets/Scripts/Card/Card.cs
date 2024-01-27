@@ -24,6 +24,7 @@ public class Card : MonoBehaviour
 
     private void Awake()
     {
+        button = GetComponent<UnityEngine.UI.Button>();
         button.onClick.AddListener(PlayCard);
         gameObject.SetActive(false);
     }

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Fairy Dust (Glitter)
   m_EditorClassIdentifier: 
   cardName: Fairy Dust (Glitter)
-  cardDescriptions: []
+  cardDescriptions:
+  - The finest glitter of the kingdom
   energyCost: 2
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
   cardImage: {fileID: 0}

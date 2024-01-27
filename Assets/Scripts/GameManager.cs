@@ -31,11 +31,7 @@ public class GameManager : Singleton<GameManager>
         }
         if (Input.GetKeyUp(KeyCode.Return))
         {
-            //get first card
-            if(currentBattleDeck.Count > 0)
-            {
-                DrawCards(1);
-            }
+            DrawCards(1);
         }
         if(Input.GetKeyUp(KeyCode.F12))
         {

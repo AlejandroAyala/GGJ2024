@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
   m_Name: Food!
   m_EditorClassIdentifier: 
-  cardName: Guards!
-  cardDescriptions: []
+  cardName: Food!
+  cardDescriptions:
+  - That looks delicious
   energyCost: 1
   cardType: {fileID: 11400000, guid: 4369535c48fd9e94fbea144dc998d91a, type: 2}
   cardImage: {fileID: 0}

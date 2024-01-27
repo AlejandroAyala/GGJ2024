@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Elongation
   m_EditorClassIdentifier: 
   cardName: Elongation
-  cardDescriptions: []
+  cardDescriptions:
+  - Even a log is more flexible
   energyCost: 1
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
   cardImage: {fileID: 0}

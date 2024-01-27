@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ClearThroat
   m_EditorClassIdentifier: 
   cardName: Clear Throat
-  cardDescriptions: []
+  cardDescriptions:
+  - Carefull you dont want to choke
   energyCost: 1
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
   cardImage: {fileID: 0}

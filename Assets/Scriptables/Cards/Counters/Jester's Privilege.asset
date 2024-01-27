@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Jester's Privilege
   m_EditorClassIdentifier: 
   cardName: Jester's Privilege
-  cardDescriptions: []
+  cardDescriptions:
+  - Phew!
   energyCost: 0
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
   cardImage: {fileID: 0}

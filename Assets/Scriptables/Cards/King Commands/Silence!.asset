@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Silence!
   m_EditorClassIdentifier: 
   cardName: Silence!
-  cardDescriptions: []
+  cardDescriptions:
+  - Please, not the tongue!
   energyCost: 1
   cardType: {fileID: 11400000, guid: 4369535c48fd9e94fbea144dc998d91a, type: 2}
   cardImage: {fileID: 0}
