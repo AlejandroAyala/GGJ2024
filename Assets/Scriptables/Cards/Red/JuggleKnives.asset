@@ -18,7 +18,7 @@ MonoBehaviour:
     impresive
   energyCost: 1
   cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
-  cardImage: {fileID: 21300000, guid: a42bb582b5628554293aff7ad047b616, type: 3}
+  cardImage: {fileID: -1596706436, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: 'Effect: Inflict amusement to the target'
     type: 0

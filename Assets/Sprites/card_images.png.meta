@@ -113,10 +113,10 @@ TextureImporter:
       name: card_images_0
       rect:
         serializedVersion: 2
-        x: 94
-        y: 1205
-        width: 368
-        height: 326
+        x: 0
+        y: 1081
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: card_images_1
       rect:
         serializedVersion: 2
-        x: 479
-        y: 1226
-        width: 348
-        height: 298
+        x: 360
+        y: 1081
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: card_images_2
       rect:
         serializedVersion: 2
-        x: 833
-        y: 1213
-        width: 334
-        height: 323
+        x: 720
+        y: 1081
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: card_images_3
       rect:
         serializedVersion: 2
-        x: 1256
-        y: 1171
-        width: 287
-        height: 363
+        x: 1080
+        y: 1081
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: card_images_4
       rect:
         serializedVersion: 2
-        x: 1227
-        y: 835
-        width: 351
-        height: 308
+        x: 1440
+        y: 1081
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: card_images_5
       rect:
         serializedVersion: 2
-        x: 1225
-        y: 481
-        width: 372
-        height: 374
+        x: 0
+        y: 721
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: card_images_6
       rect:
         serializedVersion: 2
-        x: 1233
-        y: 105
-        width: 379
-        height: 319
+        x: 360
+        y: 721
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: card_images_7
       rect:
         serializedVersion: 2
-        x: 818
-        y: 137
-        width: 363
-        height: 363
+        x: 720
+        y: 721
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: card_images_8
       rect:
         serializedVersion: 2
-        x: 491
-        y: 147
-        width: 318
-        height: 340
+        x: 1080
+        y: 721
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: card_images_9
       rect:
         serializedVersion: 2
-        x: 66
-        y: 139
-        width: 392
-        height: 327
+        x: 1440
+        y: 721
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: card_images_10
       rect:
         serializedVersion: 2
-        x: 62
-        y: 498
-        width: 382
-        height: 373
+        x: 0
+        y: 361
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: card_images_11
       rect:
         serializedVersion: 2
-        x: 476
-        y: 519
-        width: 321
-        height: 349
+        x: 360
+        y: 361
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: card_images_12
       rect:
         serializedVersion: 2
-        x: 825
-        y: 521
-        width: 330
-        height: 316
+        x: 720
+        y: 361
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +386,10 @@ TextureImporter:
       name: card_images_13
       rect:
         serializedVersion: 2
-        x: 829
-        y: 865
-        width: 334
-        height: 339
+        x: 1080
+        y: 361
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +407,10 @@ TextureImporter:
       name: card_images_14
       rect:
         serializedVersion: 2
-        x: 470
-        y: 886
-        width: 342
-        height: 323
+        x: 1440
+        y: 361
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: card_images_15
       rect:
         serializedVersion: 2
-        x: 96
-        y: 885
-        width: 344
-        height: 309
+        x: 0
+        y: 1
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,6 +441,90 @@ TextureImporter:
       bones: []
       spriteID: e5e0685008b30f4428c3514c178517da
       internalID: 311992045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card_images_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b11f37fb8b4e334180dfd13f1437a86
+      internalID: 1116187169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card_images_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8112ed233dfc3e4a87fc8bb0ae25ee6
+      internalID: 1688819755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card_images_18
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8c1f1934161ea429ca1fad18ebbc69
+      internalID: -758616268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: card_images_19
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5fbd0ffc5706c46897121299236589
+      internalID: -1447693026
       vertices: []
       indices: 
       edges: []
@@ -464,6 +548,10 @@ TextureImporter:
       card_images_13: -1885836264
       card_images_14: -1596706436
       card_images_15: 311992045
+      card_images_16: 1116187169
+      card_images_17: 1688819755
+      card_images_18: -758616268
+      card_images_19: -1447693026
       card_images_2: 1862077988
       card_images_3: -1361973645
       card_images_4: 1326236635

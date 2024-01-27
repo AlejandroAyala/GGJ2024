@@ -522,7 +522,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e470ac8e225474ab856bf98aef853d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDeck: []
+  allCards: []
+  commandCards: []
+  currentEnemy: {fileID: 0}
 --- !u!4 &2066091849
 Transform:
   m_ObjectHideFlags: 0

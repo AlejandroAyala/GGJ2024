@@ -24,7 +24,7 @@ MonoBehaviour:
     harmed during this trick.
   energyCost: 2
   cardType: {fileID: 11400000, guid: 6b16ff2cd7fc9f844bdbae7bad544a55, type: 2}
-  cardImage: {fileID: -1411563891, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
+  cardImage: {fileID: 95416885, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: 'Effect: Inflict amusement to the target'
     type: 0

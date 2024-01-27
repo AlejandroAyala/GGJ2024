@@ -17,9 +17,9 @@ MonoBehaviour:
   - Please, not the tongue!
   energyCost: 1
   cardType: {fileID: 11400000, guid: 4369535c48fd9e94fbea144dc998d91a, type: 2}
-  cardImage: {fileID: -308171032, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
+  cardImage: {fileID: 1688819755, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Play this card to vanish it from the deck
-    type: 0
+    type: 6
     applyAmmount: 0
     applyType: 0

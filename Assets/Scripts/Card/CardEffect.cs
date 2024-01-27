@@ -7,7 +7,7 @@ public class CardEffect
 {
     public string description;
     public Type type;
-    public float applyAmmount;
+    public int applyAmmount;
     public ApplyType applyType;
 
     public void DoEffect()
@@ -15,6 +15,7 @@ public class CardEffect
         switch (type)
         {
             case Type.DAMAGE:
+                GameManager.Instance.GetEnemy().TakeDamage(applyAmmount);
                 break;
             case Type.BUFF_BLUE:
                 break;
