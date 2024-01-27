@@ -33,6 +33,7 @@ public class UIManager : Singleton<UIManager>
     public void ReturnCardToQueue(Card card)
     {
         card.gameObject.SetActive(false);
+        card.button.onClick.RemoveAllListeners();
         cardPool.Enqueue(card);
     }
 

@@ -9,5 +9,6 @@ public enum Type
     BUFF_BLUE,
     BUFF_RED,
     BUFF_ENERGY,
-    BUFF_COUNTER
+    BUFF_COUNTER,
+    COMMAND
 }

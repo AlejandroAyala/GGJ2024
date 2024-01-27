@@ -17,7 +17,7 @@ MonoBehaviour:
   - You perfectly landed a backflip... too bad it was on your face.
   energyCost: 2
   cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 1265621209, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: 'Effect: Inflict amusement to the target'
     type: 0

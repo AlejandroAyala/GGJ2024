@@ -61,9 +61,9 @@ public class Card : MonoBehaviour
         {
             ce.DoEffect();
         }
-        GameManager.Instance.RemoveFromHand(this);
+        DeckManager.Instance.RemoveFromHand(this);
         //play animation
-        GameManager.Instance.AddToDiscardPile(cardInfo);
+        DeckManager.Instance.AddToDiscardPile(cardInfo);
         UIManager.Instance.ReturnCardToQueue(this);
     }
 
