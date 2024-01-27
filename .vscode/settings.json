@@ -49,7 +49,10 @@
         "Obj/": true,
         "ProjectSettings/": true,
         "temp/": true,
-        "Temp/": true
+        "Temp/": true,
+        "UserSettings/": true,
+        "Logs/": true,
+        "Packages/": true
     },
     "dotnet.defaultSolution": "GGJ2024.sln"
 }

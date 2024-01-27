@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
+  m_Name: DadJoke
+  m_EditorClassIdentifier: 
+  cardName: Dad Joke
+  cardDescriptions:
+  - Why did the jester become a gardener? He wanted to grow some pun-kins!
+  - Why did the peasant bring a pencil to the king's court? To draw his sword!
+  - Why did the tomato turn red? Because it saw the salad dressing!
+  - My favourite childhood memory was building sand castles with my grandad, until
+    my mom took the ashes away.
+  - The castle chef overcooked the meat of today's lunch, but that's Ok, we all make
+    Miss-stakes.
+  - My liege, about the fruit theif  captured this afternoon, you need to let that
+    man-go.
+  energyCost: 2
+  cardType: {fileID: 11400000, guid: f249006b8fbcd2844ad853ecd4b590cb, type: 2}
+  cardImage: {fileID: 0}
+  cardEffects:
+  - description: 'Effect: Inflict amusement to the target'
+    type: 0
+    applyAmmount: 3
+    applyType: 0

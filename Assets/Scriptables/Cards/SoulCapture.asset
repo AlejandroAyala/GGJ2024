@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
-  m_Name: JuggleKnives
+  m_Name: SoulCapture
   m_EditorClassIdentifier: 
-  cardName: Juggle Dull Knives
+  cardName: Soul Capture
   cardDescriptions:
-  - You masterfully juggle dull knives, altough sharp knives would have been more
-    impresive
+  - It wouldn't be that impressive nowadays.
+  - This looks suspiciously like a polaroid.
   energyCost: 1
-  cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
-  cardImage: {fileID: 21300000, guid: a42bb582b5628554293aff7ad047b616, type: 3}
+  cardType: {fileID: 11400000, guid: 6b16ff2cd7fc9f844bdbae7bad544a55, type: 2}
+  cardImage: {fileID: 0}
   cardEffects:
   - description: 'Effect: Inflict amusement to the target'
     type: 0

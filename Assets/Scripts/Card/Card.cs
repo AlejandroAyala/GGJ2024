@@ -21,6 +21,11 @@ public class Card : MonoBehaviour
     [SerializeField]
     public UnityEngine.UI.Image cardImage;
 
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
+
     public void SetCardInfo(CardScriptable card)
     {
         cardInfo = card;
@@ -44,6 +49,7 @@ public class Card : MonoBehaviour
         }
         energy.text = card.energyCost.ToString();
         cardImage.sprite = card.cardImage;
+        gameObject.SetActive(true);
     }
 
 

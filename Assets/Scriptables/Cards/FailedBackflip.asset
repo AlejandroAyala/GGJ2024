@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
-  m_Name: JuggleKnives
+  m_Name: FailedBackflip
   m_EditorClassIdentifier: 
-  cardName: Juggle Dull Knives
+  cardName: Failed Backflip
   cardDescriptions:
-  - You masterfully juggle dull knives, altough sharp knives would have been more
-    impresive
-  energyCost: 1
+  - You perfectly landed a backflip... too bad it was on your face.
+  energyCost: 2
   cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
-  cardImage: {fileID: 21300000, guid: a42bb582b5628554293aff7ad047b616, type: 3}
+  cardImage: {fileID: 0}
   cardEffects:
   - description: 'Effect: Inflict amusement to the target'
     type: 0
-    applyAmmount: 2
+    applyAmmount: 3
     applyType: 0
