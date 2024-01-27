@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
-  m_Name: Cheat Sheet 1
+  m_Name: Fairy Dust (Glitter)
   m_EditorClassIdentifier: 
   cardName: Fairy Dust (Glitter)
   cardDescriptions: []

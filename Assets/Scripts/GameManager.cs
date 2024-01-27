@@ -9,11 +9,14 @@ using UnityEditor;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
-    private List<CardScriptable> currentDeck = new List<CardScriptable>();
-
+    private List<CardScriptable> currentBattleDeck = new List<CardScriptable>();
+    [SerializeField]
     private List<CardScriptable> playerDeck = new List<CardScriptable>();
+    [SerializeField]
     private List<CardScriptable> allCards = new List<CardScriptable>();
+    [SerializeField]
     private List<Card> activeHand = new List<Card>();
+    [SerializeField]
     private List<CardScriptable> discardPile = new List<CardScriptable>();
 
     public void Update()
@@ -24,15 +27,19 @@ public class GameManager : Singleton<GameManager>
         }
         if(Input.GetKeyUp(KeyCode.F4))
         {
-            GenerateRandomDeck(5);
+            GenerateRandomDeck(15);
         }
         if (Input.GetKeyUp(KeyCode.Return))
         {
             //get first card
-            if(playerDeck.Count > 0)
+            if(currentBattleDeck.Count > 0)
             {
                 DrawCards(1);
             }
+        }
+        if(Input.GetKeyUp(KeyCode.F12))
+        {
+            Battle();
         }
     }
 
@@ -45,13 +52,12 @@ public class GameManager : Singleton<GameManager>
             CardScriptable c = AssetDatabase.LoadAssetAtPath<CardScriptable>(path);
             allCards.Add(c);
         }
-        GenerateRandomDeck(5);
     }
 
     public void ShuffleDeck()
     {
         Random random = new();
-        playerDeck = playerDeck.OrderBy(x => random.Next()).ToList();
+        currentBattleDeck = currentBattleDeck.OrderBy(x => random.Next()).ToList();
         random = null;
     }
 
@@ -65,6 +71,11 @@ public class GameManager : Singleton<GameManager>
         playerDeck.Add(card);
     }
 
+    public void AddBattleCardToDeck(CardScriptable card)
+    {
+        currentBattleDeck.Add(card);
+    }
+
     public void GenerateRandomDeck(int cardQuantity)
     {
         playerDeck.Clear();
@@ -76,12 +87,12 @@ public class GameManager : Singleton<GameManager>
 
     public void DrawCards(int ammount)
     {
-        ammount = Mathf.Min(ammount, playerDeck.Count);
+        ammount = Mathf.Min(ammount, currentBattleDeck.Count);
         for (int i = 0; i < ammount; i++)
         {
-            Card c = UIManager.Instance.InstantiateCard(playerDeck[0]);
+            Card c = UIManager.Instance.InstantiateCard(currentBattleDeck[0]);
             activeHand.Add(c);
-            playerDeck.RemoveAt(0);
+            currentBattleDeck.RemoveAt(0);
         }
     }
 
@@ -93,5 +104,11 @@ public class GameManager : Singleton<GameManager>
     public void RemoveFromHand(Card c)
     {
         activeHand.Remove(c);
+    }
+
+    public void Battle()
+    {
+        currentBattleDeck.Clear();
+        currentBattleDeck.AddRange(playerDeck);
     }
 }
