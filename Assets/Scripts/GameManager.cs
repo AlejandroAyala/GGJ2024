@@ -10,7 +10,11 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
     private List<CardScriptable> currentDeck = new List<CardScriptable>();
+
+    private List<CardScriptable> playerDeck = new List<CardScriptable>();
     private List<CardScriptable> allCards = new List<CardScriptable>();
+    private List<Card> activeHand = new List<Card>();
+    private List<CardScriptable> discardPile = new List<CardScriptable>();
 
     public void Update()
     {
@@ -25,10 +29,9 @@ public class GameManager : Singleton<GameManager>
         if (Input.GetKeyUp(KeyCode.Return))
         {
             //get first card
-            if(currentDeck.Count > 0)
+            if(playerDeck.Count > 0)
             {
-                UIManager.Instance.InstantiateCard(currentDeck[0]);
-                currentDeck.RemoveAt(0);
+                DrawCards(1);
             }
         }
     }
@@ -48,26 +51,47 @@ public class GameManager : Singleton<GameManager>
     public void ShuffleDeck()
     {
         Random random = new();
-        currentDeck = currentDeck.OrderBy(x => random.Next()).ToList();
+        playerDeck = playerDeck.OrderBy(x => random.Next()).ToList();
         random = null;
     }
 
     public void OrderDeck()
-    {        
-        currentDeck = currentDeck.OrderBy(x => x.name).ToList();
+    {
+        playerDeck = playerDeck.OrderBy(x => x.name).ToList();
     }
 
     public void AddCardToDeck(CardScriptable card)
     {
-        currentDeck.Add(card);
+        playerDeck.Add(card);
     }
 
     public void GenerateRandomDeck(int cardQuantity)
     {
-        currentDeck.Clear();
+        playerDeck.Clear();
         for(int i = 0; i<cardQuantity;i++)
         {
-            currentDeck.Add(allCards[UnityEngine.Random.Range(0,allCards.Count-1)]);
+            playerDeck.Add(allCards[UnityEngine.Random.Range(0,allCards.Count-1)]);
         }
+    }
+
+    public void DrawCards(int ammount)
+    {
+        ammount = Mathf.Min(ammount, playerDeck.Count);
+        for (int i = 0; i < ammount; i++)
+        {
+            Card c = UIManager.Instance.InstantiateCard(playerDeck[0]);
+            activeHand.Add(c);
+            playerDeck.RemoveAt(0);
+        }
+    }
+
+    public void AddToDiscardPile(CardScriptable card)
+    {
+        discardPile.Add(card);
+    }
+
+    public void RemoveFromHand(Card c)
+    {
+        activeHand.Remove(c);
     }
 }

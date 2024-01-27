@@ -52,5 +52,17 @@ public class Card : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void PlayCard()
+    {
+        foreach(CardEffect ce in cardInfo.cardEffects)
+        {
+            ce.DoEffect();
+        }
+        GameManager.Instance.RemoveFromHand(this);
+        //play animation
+        GameManager.Instance.AddToDiscardPile(cardInfo);
+        UIManager.Instance.ReturnCardToQueue(this);
+    }
+
 
 }
