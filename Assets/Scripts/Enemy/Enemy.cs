@@ -17,6 +17,14 @@ public class Enemy : MonoBehaviour
     private EnemyCommands nextCommand = EnemyCommands.NONE;
     [SerializeField]
     private EnemyBlocks currentBlock = EnemyBlocks.NONE;
+    public Animator animator;
+
+
+    public void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
 
     public void SetMaxHealth(int hp)
     {
@@ -66,12 +74,15 @@ public class Enemy : MonoBehaviour
             case EnemyCommands.NONE:
                 break;
             case EnemyCommands.LIGHT_HEAL:
+                animator.SetTrigger("k_drink");
                 Heal(5);
                 break;
             case EnemyCommands.MEDIUM_HEAL:
+                animator.SetTrigger("k_drink");
                 Heal(10);
                 break;
             case EnemyCommands.HARD_HEAL:
+                animator.SetTrigger("k_drink");
                 Heal(15);
                 break;
             case EnemyCommands.GUARDS:
@@ -95,6 +106,22 @@ public class Enemy : MonoBehaviour
                 break;
         }
         currentBlock = nextBlock;
+        Debug.Log(currentBlock);
+        switch (currentBlock)
+        {
+            case EnemyBlocks.BLOCK_BLUE:
+                Debug.Log(currentBlock);
+                animator.SetTrigger("k_drink");
+                break;
+            case EnemyBlocks.BLOCK_GREEN:
+                Debug.Log(currentBlock);
+                animator.SetTrigger("k_talkhand");
+                break;
+            case EnemyBlocks.BLOCK_RED:
+                Debug.Log(currentBlock);
+                animator.SetTrigger("k_lookaway");
+                break;
+        }
         ChooseActions();
     }
 }
