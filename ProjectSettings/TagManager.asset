@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Deck
   - Energy
+  - Shield
   layers:
   - Default
   - TransparentFX

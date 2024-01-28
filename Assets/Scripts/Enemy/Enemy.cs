@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     private EnemyCommands nextCommand = EnemyCommands.NONE;
     [SerializeField]
     private EnemyBlocks currentBlock = EnemyBlocks.NONE;
+    private SpriteRenderer shield;
     public Animator animator;
 
 
@@ -26,6 +27,8 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         UIManager.Instance.SetHP(hp);
         UIManager.Instance.SetMaxHP(maxHp);
+        shield = GameObject.FindWithTag("Shield").GetComponent<SpriteRenderer>();
+        shield.gameObject.SetActive(false);
     }
 
     public void Update()
@@ -126,21 +129,35 @@ public class Enemy : MonoBehaviour
         }
         currentBlock = nextBlock;
         Debug.Log(currentBlock);
+        Color color = Color.white;
         switch (currentBlock)
         {
             case EnemyBlocks.BLOCK_BLUE:
                 Debug.Log(currentBlock);
+                shield.gameObject.SetActive(true);
+                color = Color.blue;
+                color.a = .2f;
                 animator.SetTrigger("k_drink");
                 break;
             case EnemyBlocks.BLOCK_GREEN:
                 Debug.Log(currentBlock);
+                shield.gameObject.SetActive(true);
+                color = Color.green;
+                color.a = .2f;
                 animator.SetTrigger("k_talkhand");
                 break;
             case EnemyBlocks.BLOCK_RED:
                 Debug.Log(currentBlock);
+                shield.gameObject.SetActive(true);
+                color = Color.red;
+                color.a = .2f;
                 animator.SetTrigger("k_lookaway");
                 break;
+            case EnemyBlocks.NONE:
+                shield.gameObject.SetActive(false);
+                break;
         }
+        shield.color = color;
         ChooseActions();
     }
 }
