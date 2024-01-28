@@ -45,6 +45,11 @@ public class DeckManager : Singleton<DeckManager>
             activeHand.Add(c);
             currentBattleDeck.RemoveAt(0);
         }
+        if(currentBattleDeck.Count == 0)
+        {
+            currentBattleDeck.AddRange(discardPile);
+            ShuffleDeck();
+        }
 
     }
 

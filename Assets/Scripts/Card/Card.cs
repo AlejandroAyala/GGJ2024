@@ -77,7 +77,10 @@ public class Card : MonoBehaviour
                 }
                 DeckManager.Instance.RemoveFromHand(this);
                 //play animation
-                DeckManager.Instance.AddToDiscardPile(cardInfo);
+                if (cardInfo.cardType.typeName != "Garbage")
+                {
+                    DeckManager.Instance.AddToDiscardPile(cardInfo);
+                }
                 UIManager.Instance.ReturnCardToQueue(this);
             }
         }
