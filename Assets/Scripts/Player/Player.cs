@@ -8,6 +8,7 @@ public class Player : Singleton<Player>
 
     public int energy;
     public int maxEnergy = 3;
+    public Animator animator;
 
     internal void AddEnergy(int applyAmmount)
     {
