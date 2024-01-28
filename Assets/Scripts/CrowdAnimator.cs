@@ -9,6 +9,7 @@ public class CrowdAnimator : MonoBehaviour
 
     public void Awake()
     {
+        animator = GetComponent<Animator>();
         StartCoroutine(WaitRandom());
     }
 
