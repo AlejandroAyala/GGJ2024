@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fccd142024dccad4590b75bcb4325261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
+  transition: {fileID: 1971150749}
 --- !u!1001 &1102737541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1074,6 +1074,11 @@ PrefabInstance:
 --- !u!224 &1971150748 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3983501421294343065, guid: 9cba11c69067c8c418750b4fc42537b8, type: 3}
+  m_PrefabInstance: {fileID: 1971150747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1971150749 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3150743120421620418, guid: 9cba11c69067c8c418750b4fc42537b8, type: 3}
   m_PrefabInstance: {fileID: 1971150747}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1979813622
