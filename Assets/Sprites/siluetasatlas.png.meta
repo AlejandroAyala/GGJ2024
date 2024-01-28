@@ -113,12 +113,12 @@ TextureImporter:
       name: siluetasatlas_0
       rect:
         serializedVersion: 2
-        x: 230
-        y: 724
-        width: 230
-        height: 467
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 238
+        y: 732
+        width: 214
+        height: 453
+      alignment: 9
+      pivot: {x: 0.49389833, y: -0.0015615838}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,85 +131,85 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: siluetasatlas_1
+      name: siluetasatlas_9
       rect:
         serializedVersion: 2
-        x: 469
-        y: 729
-        width: 200
-        height: 380
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 923
+        y: 738
+        width: 203
+        height: 428
+      alignment: 9
+      pivot: {x: 0.4871351, y: 0.0057528485}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12ce1cf8f24533d408a479844c31f152
-      internalID: 1758446870
+      spriteID: 9ba3624605cd3b849b5e291b99b53587
+      internalID: -1595231503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: siluetasatlas_2
+      name: siluetasatlas_15
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 741
+        width: 212
+        height: 399
+      alignment: 9
+      pivot: {x: 0.51231986, y: -0.000716207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5757076487d0c47469ca9095d01c95cd
+      internalID: 1920706698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siluetasatlas_18
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 732
+        width: 194
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.009101581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c7ccc6433b8294eaeb752cf56cfd10
+      internalID: 1689772536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siluetasatlas_20
       rect:
         serializedVersion: 2
         x: 671
-        y: 732
-        width: 234
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 10, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ca6c4c07ddc2b743b30c91efb6b16ad
-      internalID: 1170448694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: siluetasatlas_3
-      rect:
-        serializedVersion: 2
-        x: 917
-        y: 735
-        width: 197
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 17, y: 0, z: 5, w: 5}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8becfea3acf34604b8bc5fbb281f33ac
-      internalID: 105897071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: siluetasatlas_4
-      rect:
-        serializedVersion: 2
-        x: 1148
-        y: 741
-        width: 199
-        height: 380
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 734
+        width: 236
+        height: 399
+      alignment: 9
+      pivot: {x: 0.49446702, y: 0.00255644}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8325a8bf4319efc468b9b79166439823
-      internalID: -563712428
+      spriteID: 56fd8a8c6421ebd4b99523a558743492
+      internalID: -392470107
       vertices: []
       indices: 
       edges: []
@@ -227,9 +227,29 @@ TextureImporter:
     nameFileIdTable:
       siluetasatlas_0: 1804141261
       siluetasatlas_1: 1758446870
+      siluetasatlas_10: 515076933
+      siluetasatlas_11: 1347785252
+      siluetasatlas_12: 1743195510
+      siluetasatlas_13: -2114802329
+      siluetasatlas_14: 860389850
+      siluetasatlas_15: 1920706698
+      siluetasatlas_16: -197552566
+      siluetasatlas_17: -2067758567
+      siluetasatlas_18: 1689772536
+      siluetasatlas_19: 1539889778
       siluetasatlas_2: 1170448694
+      siluetasatlas_20: -392470107
+      siluetasatlas_21: 1471413989
+      siluetasatlas_22: 686240429
+      siluetasatlas_23: 1471164950
+      siluetasatlas_24: 1527552485
       siluetasatlas_3: 105897071
       siluetasatlas_4: -563712428
+      siluetasatlas_5: 1423383585
+      siluetasatlas_6: 641407456
+      siluetasatlas_7: 2116175898
+      siluetasatlas_8: -1645155275
+      siluetasatlas_9: -1595231503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
