@@ -48,6 +48,7 @@ public class DeckManager : Singleton<DeckManager>
         if(currentBattleDeck.Count == 0)
         {
             currentBattleDeck.AddRange(discardPile);
+            discardPile.Clear();
             ShuffleDeck();
         }
 
