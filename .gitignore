@@ -70,3 +70,15 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Layer Lab/GUI Pro-FantasyRPG/PSD/PSD.unitypackage.meta
+Assets/PlayMaker/Editor/Install/LegacyGUI.unitypackage.meta
+Assets/PlayMaker/Editor/Install/LegacyITween.unitypackage.meta
+Assets/PlayMaker/Editor/Install/LegacyNetworking.unitypackage.meta
+Assets/PlayMaker/Editor/Install/Playmaker.1.9.5.unitypackage.meta
+Assets/PlayMaker/Editor/Install/Playmaker.1.9.6.unitypackage.meta
+Assets/PlayMaker/Editor/Install/Playmaker.1.9.7.unitypackage.meta
+Assets/PlayMaker/Editor/Install/Playmaker.1.9.8.unitypackage.meta
+Assets/PlayMaker/Editor/Install/ProfilerActions.unitypackage.meta
+Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset
+Assets/PlayMaker/Versions/PlaymakerDefault.unitypackage.meta
+Assets/PlayMaker/Versions/PlaymakerPreview.unitypackage.meta
