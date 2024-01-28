@@ -1,11 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Random = System.Random;
-using Unity.VisualScripting;
 using UnityEditor;
-using System;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -153,9 +149,11 @@ public class GameManager : Singleton<GameManager>
 
     private void ApplyDelayedEffects()
     {
-        foreach(CardEffect c in queuedEffects)
+        while(queuedEffects.Count > 0)
         {
+            CardEffect c = queuedEffects.Dequeue();
             c.DoEffect();
+            c = null;
         }
     }
 }

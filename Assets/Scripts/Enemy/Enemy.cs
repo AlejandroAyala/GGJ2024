@@ -49,8 +49,15 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
+        StartCoroutine(KingLaugh());
+
         hp -= damage;
         hp = Mathf.Max(0, hp);
+    }
+    IEnumerator KingLaugh()
+    {
+        yield return new WaitForSeconds(2);
+        animator.SetTrigger("k_laugh");
     }
 
     public void Heal(int ammount)
