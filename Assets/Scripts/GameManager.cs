@@ -91,6 +91,7 @@ public class GameManager : Singleton<GameManager>
         currentEnemy.SetMaxHealth(20);
         currentEnemy.SetHealth(20);
         isInBattle = true;
+        currentEnemy.ChooseActions();
         PlayPlayerTurn();
     }
 
@@ -111,13 +112,14 @@ public class GameManager : Singleton<GameManager>
     public void PlayKingTurn()
     {
         currentEnemy.DoActions();
-        ApplyDelayedEffects();
         PlayPlayerTurn();
     }
 
     private void PlayPlayerTurn()
     {
         DeckManager.Instance.DrawCards(3);
+        Player.Instance.ReloadEnergy();
+        ApplyDelayedEffects();
     }
 
     private void ApplyDelayedEffects()

@@ -14,7 +14,11 @@ public class DeckManager : Singleton<DeckManager>
     private List<Card> activeHand = new List<Card>();
     [SerializeField]
     private List<CardScriptable> discardPile = new List<CardScriptable>();
-  
+
+    public void Update()
+    {
+        UIManager.Instance.SetDeckAmmount(currentBattleDeck.Count);
+    }
 
     public void GenerateRandomDeck(int cardQuantity)
     {

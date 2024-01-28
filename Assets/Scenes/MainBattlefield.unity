@@ -562,6 +562,8 @@ MonoBehaviour:
   canvas: {fileID: 300506544}
   panel: {fileID: 408209534}
   cardPrefab: {fileID: 4893186072980258863, guid: e1465f8d8df79f64397f2f2410705a66, type: 3}
+  energy: {fileID: 1049572093}
+  deckAmmount: {fileID: 1183987546}
 --- !u!1 &343816571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1364,7 @@ GameObject:
   - component: {fileID: 1049572093}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Energy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

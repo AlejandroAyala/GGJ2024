@@ -31,13 +31,14 @@ public class Card : MonoBehaviour
     private void Awake()
     {
         button = GetComponent<UnityEngine.UI.Button>();
-        button.onClick.AddListener(PlayCard);
         gameObject.SetActive(false);
     }
 
     public void SetCardInfo(CardScriptable card)
     {
         cardInfo = card;
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(PlayCard);
         title.text = card.cardName;
         desc.text = card.cardDescriptions[Random.Range(0, card.cardDescriptions.Length-1)];
         StringBuilder sb = new StringBuilder();
@@ -64,14 +65,19 @@ public class Card : MonoBehaviour
 
     public void PlayCard()
     {
-        foreach(CardEffect ce in cardInfo.cardEffects)
+        if(Player.Instance.energy >= cardInfo.energyCost)
         {
-            ce.DoEffect();
+            Player.Instance.energy -= cardInfo.energyCost;
+            foreach (CardEffect ce in cardInfo.cardEffects)
+            {
+                ce.DoEffect();
+            }
+            DeckManager.Instance.RemoveFromHand(this);
+            //play animation
+            DeckManager.Instance.AddToDiscardPile(cardInfo);
+            UIManager.Instance.ReturnCardToQueue(this);
         }
-        DeckManager.Instance.RemoveFromHand(this);
-        //play animation
-        DeckManager.Instance.AddToDiscardPile(cardInfo);
-        UIManager.Instance.ReturnCardToQueue(this);
+        //TODO: do something when no energy
     }
 
     public void MoveCard()

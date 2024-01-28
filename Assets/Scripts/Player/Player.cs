@@ -13,4 +13,15 @@ public class Player : Singleton<Player>
     {
         energy += applyAmmount;
     }
+
+
+    private void Update()
+    {
+        UIManager.Instance.SetEnergy(energy);
+    }
+
+    public void ReloadEnergy()
+    {
+        energy = maxEnergy;
+    }
 }
