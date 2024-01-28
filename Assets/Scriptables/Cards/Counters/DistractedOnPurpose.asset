@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7ab28cf388efa488affb161cde5be0, type: 3}
-  m_Name: Fairy Dust (Glitter)
+  m_Name: DistractedOnPurpose
   m_EditorClassIdentifier: 
-  cardName: Fairy Dust (Glitter)
+  cardName: Distracted On Purpose
   cardDescriptions:
-  - The finest glitter of the kingdom
-  energyCost: 2
+  - Hmmm, Whats that?
+  energyCost: 1
   cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
-  cardImage: {fileID: 1862077988, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
+  cardImage: {fileID: 1279751601, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
-  - description: Next Magic Trick card does 3x damage
-    type: 2
-    applyAmmount: 300
-    applyType: 1
+  - description: Block a King's Command
+    type: 5
+    applyAmmount: 1
+    applyType: 0
