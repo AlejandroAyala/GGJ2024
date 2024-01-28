@@ -88,4 +88,26 @@ public class DeckManager : Singleton<DeckManager>
         }
     }
 
+    internal void SetStartingDeck(StartingDeck startingDeck)
+    {
+        playerDeck.Clear();
+        if(startingDeck.startingCards.Count != startingDeck.cardQuantity.Count)
+        {
+            Debug.LogError("Starting deck missconfigured");
+        }
+
+        for(int i = 0; i < startingDeck.startingCards.Count; i++)
+        {
+            for(int j = 0; j < startingDeck.cardQuantity[i]; j++)
+            {
+                playerDeck.Add(startingDeck.startingCards[j]);
+            }
+        }
+    }
+
+    public void AddBattleCardToHand(CardScriptable card)
+    {
+        Card c = UIManager.Instance.InstantiateCard(card);
+        activeHand.Add(c);
+    }
 }
