@@ -2513,7 +2513,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energy: 3
   maxEnergy: 3
-  animator: {fileID: 0}
+  animator: {fileID: 1692499751}
+--- !u!95 &1692499751 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 88449546596314813, guid: d8faac7d4e1ed8a4f9dd83a13fed0ebb, type: 3}
+  m_PrefabInstance: {fileID: 1653975296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1756837794
 GameObject:
   m_ObjectHideFlags: 0
