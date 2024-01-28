@@ -86,7 +86,8 @@ public class GameManager : Singleton<GameManager>
         DeckManager.Instance.CreateBattleDeck();
         DeckManager.Instance.ShuffleDeck();
         //TODO: find enemy in scene
-        currentEnemy = new GameObject().AddComponent<Enemy>();
+        GameObject go = GameObject.FindGameObjectWithTag("Enemy");
+        currentEnemy = go.AddComponent<Enemy>();
         currentEnemy.SetMaxHealth(20);
         currentEnemy.SetHealth(20);
         isInBattle = true;
