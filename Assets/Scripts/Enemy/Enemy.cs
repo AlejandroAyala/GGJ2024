@@ -94,15 +94,15 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyCommands.LIGHT_HEAL:
                 animator.SetTrigger("k_drink");
-                Heal(5);
+                Heal(2);
                 break;
             case EnemyCommands.MEDIUM_HEAL:
                 animator.SetTrigger("k_drink");
-                Heal(10);
+                Heal(2);
                 break;
             case EnemyCommands.HARD_HEAL:
                 animator.SetTrigger("k_drink");
-                Heal(15);
+                Heal(2);
                 break;
             case EnemyCommands.GUARDS:
                 c = GameManager.Instance.GetCommandCardByName("Guards!");
