@@ -30,3 +30,6 @@ MonoBehaviour:
     type: 0
     applyAmmount: 3
     applyType: 0
+    delay: 0
+    affectedType: {fileID: 11400000, guid: 6b16ff2cd7fc9f844bdbae7bad544a55, type: 2}
+    block: 0

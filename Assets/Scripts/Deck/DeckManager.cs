@@ -77,14 +77,13 @@ public class DeckManager : Singleton<DeckManager>
 
     public void DiscardRandomCards(int x)
     {
-        if(activeHand.Count >= x)
-        {
-            for (int i = 0; i < x; i++)
-            { 
-                int randIdx = UnityEngine.Random.Range(0,activeHand.Count-1);
-                Card card = activeHand[randIdx];
-                RemoveFromHand(card);
-            }
+        List<Card> ableToDiscard = activeHand.Where((x) => { return !x.cardInfo.cardType.Equals(CardType.COMMAND); }).ToList();
+        int discard = Mathf.Min(ableToDiscard.Count, x);
+        for (int i = 0; i < discard; i++)
+        { 
+            int randIdx = UnityEngine.Random.Range(0, ableToDiscard.Count-1);
+            Card card = ableToDiscard[randIdx];
+            RemoveFromHand(card);
         }
     }
 

@@ -56,7 +56,8 @@ public class Enemy : MonoBehaviour
 
     public void DoActions()
     {
-        switch(nextCommand)
+        CardScriptable c;
+        switch (nextCommand)
         {
             case EnemyCommands.NONE:
                 break;
@@ -70,16 +71,23 @@ public class Enemy : MonoBehaviour
                 Heal(15);
                 break;
             case EnemyCommands.GUARDS:
-                CardScriptable c = GameManager.Instance.GetCommandCardByName("Guards!");
-                DeckManager.Instance.AddBattleCardToDeck(c);
+                c = GameManager.Instance.GetCommandCardByName("Guards!");
+                DeckManager.Instance.AddBattleCardToHand(c);
                 break;
             case EnemyCommands.FOOD:
+                c = GameManager.Instance.GetCommandCardByName("Food!");
+                DeckManager.Instance.AddBattleCardToHand(c);
                 break;
             case EnemyCommands.HERECY:
+                c = GameManager.Instance.GetCommandCardByName("Heresy!");
+                DeckManager.Instance.AddBattleCardToDeck(c);
                 break;
             case EnemyCommands.ORDER:
+                DeckManager.Instance.DiscardRandomCards(2);
                 break;
             case EnemyCommands.SILENCE:
+                c = GameManager.Instance.GetCommandCardByName("Silence!");
+                DeckManager.Instance.AddBattleCardToHand(c);
                 break;
         }
         

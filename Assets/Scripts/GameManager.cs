@@ -21,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     private List<StartingDeck> startingDecks = new List<StartingDeck>();
     private Queue<CardEffect> queuedEffects = new Queue<CardEffect>();
 
+
     public void SetBuffNextCard(CardTypeScriptable cardEffect)
     {
         buffNextCard = cardEffect;
@@ -73,10 +74,13 @@ public class GameManager : Singleton<GameManager>
     {        
         DeckManager.Instance.SetStartingDeck(startingDecks[UnityEngine.Random.Range(0, startingDecks.Count - 1)]);
         DeckManager.Instance.CreateBattleDeck();
+        DeckManager.Instance.ShuffleDeck();
+        //TODO: find enemy in scene
         currentEnemy = new GameObject().AddComponent<Enemy>();
         currentEnemy.SetMaxHealth(20);
         currentEnemy.SetHealth(20);
         isInBattle = true;
+        PlayPlayerTurn();
     }
 
     public Enemy GetEnemy()
@@ -96,5 +100,20 @@ public class GameManager : Singleton<GameManager>
     public void PlayKingTurn()
     {
         currentEnemy.DoActions();
+        ApplyDelayedEffects();
+        PlayPlayerTurn();
+    }
+
+    private void PlayPlayerTurn()
+    {
+        DeckManager.Instance.DrawCards(3);
+    }
+
+    private void ApplyDelayedEffects()
+    {
+        foreach(CardEffect c in queuedEffects)
+        {
+            c.DoEffect();
+        }
     }
 }
