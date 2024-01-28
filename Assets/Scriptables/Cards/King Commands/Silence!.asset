@@ -26,3 +26,4 @@ MonoBehaviour:
     delay: 0
     affectedType: {fileID: 0}
     block: 0
+  animation_trigger: j_silence

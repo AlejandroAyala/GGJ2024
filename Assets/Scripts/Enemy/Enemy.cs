@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         var v = Enum.GetValues(typeof(EnemyCommands));
         nextCommand = (EnemyCommands)v.GetValue(r.Next(v.Length-1));
         v = Enum.GetValues(typeof(EnemyBlocks));
-        nextBlock = (EnemyBlocks)v.GetValue(r.Next(v.Length));
+        nextBlock = (EnemyBlocks)v.GetValue(r.Next(v.Length)-1);
     }
 
     public void DoActions()
