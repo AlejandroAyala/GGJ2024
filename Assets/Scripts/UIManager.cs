@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager>
     public Queue<Card> cardPool = new Queue<Card>();
     public TMPro.TextMeshProUGUI energy;
     public TMPro.TextMeshProUGUI deckAmmount;
+    public TMPro.TextMeshProUGUI discardAmmount;
 
     private void OnEnable()
     {
@@ -30,6 +31,14 @@ public class UIManager : Singleton<UIManager>
         if (this.deckAmmount != null)
         {
             this.deckAmmount.text = deckAmmount.ToString();
+        }
+    }
+
+    public void SetDiscardAmmount(int discardAmmount)
+    {
+        if (this.discardAmmount != null)
+        {
+            this.discardAmmount.text = discardAmmount.ToString();
         }
     }
 

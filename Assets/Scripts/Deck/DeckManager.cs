@@ -18,6 +18,7 @@ public class DeckManager : Singleton<DeckManager>
     public void Update()
     {
         UIManager.Instance.SetDeckAmmount(currentBattleDeck.Count);
+        UIManager.Instance.SetDiscardAmmount(discardPile.Count);
     }
 
     public void GenerateRandomDeck(int cardQuantity)
