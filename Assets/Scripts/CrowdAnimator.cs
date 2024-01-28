@@ -15,7 +15,8 @@ public class CrowdAnimator : MonoBehaviour
 
     public IEnumerator WaitRandom()
     {
-        yield return new WaitForSeconds(Random.Range(0, 2));
+        float millis = Random.Range(0, 2000);
+        yield return new WaitForSeconds(millis/1000);
         if(animator!=null)
         {
             animator.SetBool("Rand", true);
