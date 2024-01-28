@@ -19,15 +19,27 @@ public class CardEffect
             case Type.DAMAGE:
                 GameManager.Instance.GetEnemy().TakeDamage(applyAmmount);
                 break;
-            case Type.BUFF_BLUE:
-                break;
-            case Type.BUFF_RED:
-                break;
-            case Type.BUFF_GREEN:
+            case Type.BUFF_CARD:
+                GameManager.Instance.SetBuffNextCard(affectedType);
                 break;
             case Type.BUFF_COUNTER:
+                GameManager.Instance.GetEnemy().BlockNextCommand();
                 break;
             case Type.BUFF_ENERGY:
+                switch(delay)
+                {
+                    case ApplyDelay.IMMEDIATE:
+                        GameManager.Instance.GetPlayer().AddEnergy(applyAmmount);
+                        break;
+                    case ApplyDelay.NEXT_TURN:
+                        CardEffect c = new CardEffect();
+                        c.applyAmmount = applyAmmount;
+                        c.type = Type.BUFF_ENERGY;
+                        c.delay = ApplyDelay.IMMEDIATE;
+                        c.applyType = ApplyType.FLAT;
+                        GameManager.Instance.ApplyEffectNextTurn(c);
+                        break;
+                }
                 break;
         }
     }

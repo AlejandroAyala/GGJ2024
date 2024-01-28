@@ -38,7 +38,7 @@ public class Card : MonoBehaviour
     public void SetCardInfo(CardScriptable card)
     {
         cardInfo = card;
-        title.text = card.name;
+        title.text = card.cardName;
         desc.text = card.cardDescriptions[Random.Range(0, card.cardDescriptions.Length-1)];
         StringBuilder sb = new StringBuilder();
         foreach(CardEffect c in card.cardEffects)

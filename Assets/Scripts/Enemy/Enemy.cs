@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,5 +31,10 @@ public class Enemy : MonoBehaviour
     {
         hp += ammount;
         hp = Mathf.Min(hp, maxHp);
+    }
+
+    internal void BlockNextCommand()
+    {
+        throw new NotImplementedException();
     }
 }

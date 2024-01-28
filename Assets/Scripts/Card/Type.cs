@@ -5,9 +5,7 @@ using UnityEngine;
 public enum Type
 {
     DAMAGE,
-    BUFF_GREEN,
-    BUFF_BLUE,
-    BUFF_RED,
+    BUFF_CARD,
     BUFF_ENERGY,
     BUFF_COUNTER,
     COMMAND,

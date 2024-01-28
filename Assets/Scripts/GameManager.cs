@@ -15,6 +15,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private Enemy currentEnemy;
     private bool isInBattle;
+    private CardTypeScriptable buffNextCard;
+    private Player player;
 
     public void Update()
     {
@@ -36,9 +38,25 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    internal Player GetPlayer()
+    {
+        return player;
+    }
+
+    internal void SetBuffNextCard(CardTypeScriptable cardEffect)
+    {
+        buffNextCard = cardEffect;
+    }
+
+    internal void ApplyEffectNextTurn(CardEffect cardEffect)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void OnEnable()
     {
         string[] cards = AssetDatabase.FindAssets($"t:{nameof(CardScriptable)}");
+        player = new GameObject().AddComponent<Player>();
         foreach(string card in cards)
         {
             string path = AssetDatabase.GUIDToAssetPath(card);
