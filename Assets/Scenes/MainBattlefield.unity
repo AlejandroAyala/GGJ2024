@@ -565,6 +565,7 @@ MonoBehaviour:
   cardPrefab: {fileID: 4893186072980258863, guid: e1465f8d8df79f64397f2f2410705a66, type: 3}
   energy: {fileID: 1049572093}
   deckAmmount: {fileID: 1183987546}
+  discardAmmount: {fileID: 1151701631}
 --- !u!1 &343816571
 GameObject:
   m_ObjectHideFlags: 0
@@ -7499,6 +7500,7 @@ MonoBehaviour:
   allCards: []
   commandCards: []
   currentEnemy: {fileID: 0}
+  locks: []
 --- !u!4 &1765396191
 Transform:
   m_ObjectHideFlags: 0
