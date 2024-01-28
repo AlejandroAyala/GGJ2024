@@ -6,7 +6,7 @@ using UnityEngine;
 public class CardEffect
 {
     public string description;
-    public Type type;
+    public CardType type;
     public int applyAmmount;
     public ApplyType applyType;
     public ApplyDelay delay;
@@ -17,16 +17,16 @@ public class CardEffect
     {
         switch (type)
         {
-            case Type.DAMAGE:
+            case CardType.DAMAGE:
                 GameManager.Instance.GetEnemy().TakeDamage(applyAmmount, block);
                 break;
-            case Type.BUFF_CARD:
+            case CardType.BUFF_CARD:
                 GameManager.Instance.SetBuffNextCard(affectedType);
                 break;
-            case Type.BUFF_COUNTER:
+            case CardType.BUFF_COUNTER:
                 GameManager.Instance.GetEnemy().BlockNextCommand();
                 break; 
-            case Type.BUFF_ENERGY:
+            case CardType.BUFF_ENERGY:
                 switch(delay)
                 {
                     case ApplyDelay.IMMEDIATE:
@@ -35,7 +35,7 @@ public class CardEffect
                     case ApplyDelay.NEXT_TURN:
                         CardEffect c = new CardEffect();
                         c.applyAmmount = applyAmmount;
-                        c.type = Type.BUFF_ENERGY;
+                        c.type = CardType.BUFF_ENERGY;
                         c.delay = ApplyDelay.IMMEDIATE;
                         c.applyType = ApplyType.FLAT;
                         GameManager.Instance.ApplyEffectNextTurn(c);

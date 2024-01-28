@@ -47,7 +47,7 @@ public class Card : MonoBehaviour
             sb.AppendLine();
         }
         effectText.text = sb.ToString();
-        CardEffect damageEffect = card.cardEffects.Where((effect) => { return effect.type == Type.DAMAGE; }).FirstOrDefault();
+        CardEffect damageEffect = card.cardEffects.Where((effect) => { return effect.type == CardType.DAMAGE; }).FirstOrDefault();
         if(damageEffect != null)
         {
             damage.text = damageEffect.applyAmmount.ToString();

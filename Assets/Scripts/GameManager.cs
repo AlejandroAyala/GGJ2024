@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
         {
             string path = AssetDatabase.GUIDToAssetPath(card);
             CardScriptable c = AssetDatabase.LoadAssetAtPath<CardScriptable>(path);
-            bool isCommand = c.cardEffects.Where((effect) => { return effect.type == Type.COMMAND; }).FirstOrDefault() != null;
+            bool isCommand = c.cardEffects.Where((effect) => { return effect.type == CardType.COMMAND; }).FirstOrDefault() != null;
             if(isCommand)
             {
                 commandCards.Add(c);
