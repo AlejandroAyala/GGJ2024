@@ -25,15 +25,18 @@ public class Card : MonoBehaviour
     public UnityEngine.UI.Button button;
     public Vector3 ogPos;
     public Vector3 target;
+    public Canvas canvas;
 
     private void Awake()
     {
         button = GetComponent<UnityEngine.UI.Button>();
         gameObject.SetActive(false);
+        canvas = GetComponentInChildren<Canvas>();
     }
 
     public void SetCardInfo(CardScriptable card)
     {
+        canvas.overrideSorting = false;
         cardInfo = card;
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(PlayCard);
@@ -60,6 +63,7 @@ public class Card : MonoBehaviour
         cardImage.sprite = card.cardImage;
         cardArt.color = card.cardType.cardColor;
         gameObject.SetActive(true);
+        canvas.overrideSorting = false;
     }
 
     public void PlayCard()
@@ -89,12 +93,16 @@ public class Card : MonoBehaviour
     public void MoveCard()
     {
         ogPos = transform.position;
-        transform.position = new Vector3(ogPos.x, ogPos.y, ogPos.z)+(Vector3.up*300f);
+        transform.position = new Vector3(ogPos.x, ogPos.y, ogPos.z)+(Vector3.up*400f);
+        canvas.overrideSorting = true;
+
+
     }
 
     public void ResetCardPosition()
     {
         transform.position = ogPos;
+        canvas.overrideSorting = false;
     }
 
 
