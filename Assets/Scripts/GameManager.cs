@@ -5,6 +5,7 @@ using System.Linq;
 using Random = System.Random;
 using Unity.VisualScripting;
 using UnityEditor;
+using System;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -18,22 +19,22 @@ public class GameManager : Singleton<GameManager>
     private CardTypeScriptable buffNextCard;
     private Player player;
     private List<StartingDeck> startingDecks = new List<StartingDeck>();
-
     private Queue<CardEffect> queuedEffects = new Queue<CardEffect>();
 
 
-    internal void SetBuffNextCard(CardTypeScriptable cardEffect)
+    public void SetBuffNextCard(CardTypeScriptable cardEffect)
     {
         buffNextCard = cardEffect;
     }
 
-    internal void ApplyEffectNextTurn(CardEffect cardEffect)
+    public void ApplyEffectNextTurn(CardEffect cardEffect)
     {
         queuedEffects.Enqueue(cardEffect);
     }
 
     public void Awake()
     {
+        GameObject.DontDestroyOnLoad(this.gameObject);
         string[] cards = AssetDatabase.FindAssets($"t:{nameof(CardScriptable)}");
         foreach(string card in cards)
         {
@@ -56,7 +57,11 @@ public class GameManager : Singleton<GameManager>
             StartingDeck c = AssetDatabase.LoadAssetAtPath<StartingDeck> (path);
             startingDecks.Add(c);
         }
+    }
 
+    public CardScriptable GetCommandCardByName(string v)
+    {
+        return commandCards.Where((x) => x.cardName.Equals(v)).FirstOrDefault();
     }
 
     public List<CardScriptable> GetAllCards()
@@ -66,12 +71,16 @@ public class GameManager : Singleton<GameManager>
 
 
     public void Battle()
-    {
+    {        
+        DeckManager.Instance.SetStartingDeck(startingDecks[UnityEngine.Random.Range(0, startingDecks.Count - 1)]);
         DeckManager.Instance.CreateBattleDeck();
+        DeckManager.Instance.ShuffleDeck();
+        //TODO: find enemy in scene
         currentEnemy = new GameObject().AddComponent<Enemy>();
         currentEnemy.SetMaxHealth(20);
         currentEnemy.SetHealth(20);
         isInBattle = true;
+        PlayPlayerTurn();
     }
 
     public Enemy GetEnemy()
@@ -81,5 +90,30 @@ public class GameManager : Singleton<GameManager>
             return currentEnemy;
         }
         return null;
+    }
+
+    public void EndPlayerTurn()
+    {
+        PlayKingTurn();
+    }
+
+    public void PlayKingTurn()
+    {
+        currentEnemy.DoActions();
+        ApplyDelayedEffects();
+        PlayPlayerTurn();
+    }
+
+    private void PlayPlayerTurn()
+    {
+        DeckManager.Instance.DrawCards(3);
+    }
+
+    private void ApplyDelayedEffects()
+    {
+        foreach(CardEffect c in queuedEffects)
+        {
+            c.DoEffect();
+        }
     }
 }

@@ -23,11 +23,13 @@ public class CrowdAnimator : MonoBehaviour
 
     public IEnumerator WaitRandom()
     {
-        float millis = Random.Range(0, 2000);
+        float millis = Random.Range(0, 1500);
         yield return new WaitForSeconds(millis/1000);
         if(animator!=null)
         {
             animator.SetBool("Rand", true);
         }
+        yield return null;
+        animator.speed = Random.Range(0.8f, 1.5f);
     }
 }
