@@ -11,8 +11,12 @@ public class Enemy : MonoBehaviour
     private int hp;
     [SerializeField]
     private int maxHp;
-    private EnemyBlocks nextBlock = EnemyBlocks.BLOCK_GREEN;
+    [SerializeField]
+    private EnemyBlocks nextBlock = EnemyBlocks.NONE;
+    [SerializeField]
     private EnemyCommands nextCommand = EnemyCommands.NONE;
+    [SerializeField]
+    private EnemyBlocks currentBlock = EnemyBlocks.NONE;
 
     public void SetMaxHealth(int hp)
     {
@@ -26,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage, EnemyBlocks blockType)
     {
-        if (blockType == nextBlock)
+        if (blockType == currentBlock)
         {
             return;
         }
@@ -45,7 +49,7 @@ public class Enemy : MonoBehaviour
         nextCommand = EnemyCommands.NONE;
     }
 
-    void ChooseActions()
+    public void ChooseActions()
     {
         Random r = new Random();
         var v = Enum.GetValues(typeof(EnemyCommands));
@@ -90,7 +94,7 @@ public class Enemy : MonoBehaviour
                 DeckManager.Instance.AddBattleCardToHand(c);
                 break;
         }
-        
+        currentBlock = nextBlock;
         ChooseActions();
     }
 }

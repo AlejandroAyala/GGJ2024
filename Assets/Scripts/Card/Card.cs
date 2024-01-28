@@ -26,18 +26,17 @@ public class Card : MonoBehaviour
     public Vector3 ogPos;
     public Vector3 target;
 
-    public Coroutine currentC;
-
     private void Awake()
     {
         button = GetComponent<UnityEngine.UI.Button>();
-        button.onClick.AddListener(PlayCard);
         gameObject.SetActive(false);
     }
 
     public void SetCardInfo(CardScriptable card)
     {
         cardInfo = card;
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(PlayCard);
         title.text = card.cardName;
         desc.text = card.cardDescriptions[Random.Range(0, card.cardDescriptions.Length-1)];
         StringBuilder sb = new StringBuilder();
@@ -51,6 +50,7 @@ public class Card : MonoBehaviour
         if(damageEffect != null)
         {
             damage.text = damageEffect.applyAmmount.ToString();
+            damage.transform.parent.gameObject.SetActive(true);
         }
         else
         {
@@ -64,14 +64,23 @@ public class Card : MonoBehaviour
 
     public void PlayCard()
     {
-        foreach(CardEffect ce in cardInfo.cardEffects)
+        //check locks
+        if(!GameManager.Instance.GetLock(cardInfo.cardType))
         {
-            ce.DoEffect();
+            if (Player.Instance.energy >= cardInfo.energyCost)
+            {
+				Player.Instance.animator.SetTrigger(cardInfo.animation_trigger);
+				Player.Instance.energy -= cardInfo.energyCost;
+                foreach (CardEffect ce in cardInfo.cardEffects)
+                {
+                    ce.DoEffect();
+                }
+                DeckManager.Instance.RemoveFromHand(this);
+                //play animation
+                DeckManager.Instance.AddToDiscardPile(cardInfo);
+                UIManager.Instance.ReturnCardToQueue(this);
+            }
         }
-        DeckManager.Instance.RemoveFromHand(this);
-        //play animation
-        DeckManager.Instance.AddToDiscardPile(cardInfo);
-        UIManager.Instance.ReturnCardToQueue(this);
     }
 
     public void MoveCard()

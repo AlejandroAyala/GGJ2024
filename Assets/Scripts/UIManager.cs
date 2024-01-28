@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,37 @@ public class UIManager : Singleton<UIManager>
     public GameObject panel;
     public GameObject cardPrefab;
     public Queue<Card> cardPool = new Queue<Card>();
+    public TMPro.TextMeshProUGUI energy;
+    public TMPro.TextMeshProUGUI deckAmmount;
+    public TMPro.TextMeshProUGUI discardAmmount;
 
     private void OnEnable()
     {
         canvas = GetComponent<Canvas>();
+    }
+
+    public void SetEnergy(int energy)
+    {
+        if(this.energy!=null)
+        {
+            this.energy.text = energy.ToString();
+        }
+    }
+
+    public void SetDeckAmmount(int deckAmmount)
+    {
+        if (this.deckAmmount != null)
+        {
+            this.deckAmmount.text = deckAmmount.ToString();
+        }
+    }
+
+    public void SetDiscardAmmount(int discardAmmount)
+    {
+        if (this.discardAmmount != null)
+        {
+            this.discardAmmount.text = discardAmmount.ToString();
+        }
     }
 
     public Card InstantiateCard(CardScriptable card)
