@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Garbage
   m_EditorClassIdentifier: 
   typeName: Garbage
-  cardColor: {r: 0.13207549, g: 0.12148453, b: 0.12148453, a: 0}
+  cardColor: {r: 0.13207549, g: 0.12148453, b: 0.12148453, a: 1}

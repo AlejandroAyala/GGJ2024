@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   typeName: Buff
-  cardColor: {r: 0.6104317, g: 0, b: 1, a: 0}
+  cardColor: {r: 0.6104317, g: 0, b: 1, a: 1}

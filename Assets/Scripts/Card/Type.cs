@@ -10,5 +10,6 @@ public enum Type
     BUFF_RED,
     BUFF_ENERGY,
     BUFF_COUNTER,
-    COMMAND
+    COMMAND,
+    BLOCK_CARD
 }

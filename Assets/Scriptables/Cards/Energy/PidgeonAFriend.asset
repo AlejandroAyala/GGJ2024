@@ -25,3 +25,4 @@ MonoBehaviour:
     type: 4
     applyAmmount: 1
     applyType: 0
+    delay: 1

@@ -9,6 +9,8 @@ public class CardEffect
     public Type type;
     public int applyAmmount;
     public ApplyType applyType;
+    public ApplyDelay delay;
+    public CardTypeScriptable affectedType;
 
     public void DoEffect()
     {

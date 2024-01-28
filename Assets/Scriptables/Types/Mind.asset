@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mind
   m_EditorClassIdentifier: 
   typeName: Mind Games
-  cardColor: {r: 0, g: 0.06572652, b: 1, a: 0}
+  cardColor: {r: 0, g: 0.06572652, b: 1, a: 1}

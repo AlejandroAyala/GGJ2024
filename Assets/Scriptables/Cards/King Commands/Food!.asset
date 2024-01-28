@@ -23,3 +23,9 @@ MonoBehaviour:
     type: 6
     applyAmmount: 0
     applyType: 0
+    delay: 0
+  - description: While this card is in the hand you cannot play red cards.
+    type: 7
+    applyAmmount: 0
+    applyType: 0
+    delay: 0
