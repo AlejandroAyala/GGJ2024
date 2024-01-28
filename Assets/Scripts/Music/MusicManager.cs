@@ -17,9 +17,8 @@ public class MusicManager : MonoBehaviour
     {
         GetComponent<AudioSource>().clip = engineStartClip;
         GetComponent<AudioSource>().Play();
-        // new WaitForSeconds(GetComponent<AudioSource>().clip.length);
+        yield return new WaitForSeconds(GetComponent<AudioSource>().clip.length);
         GetComponent<AudioSource>().clip = engineLoopClip;
         GetComponent<AudioSource>().Play();
-        yield return null;
     }
 }

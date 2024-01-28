@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -12,10 +13,27 @@ public class UIManager : Singleton<UIManager>
     public TMPro.TextMeshProUGUI energy;
     public TMPro.TextMeshProUGUI deckAmmount;
     public TMPro.TextMeshProUGUI discardAmmount;
+    public Slider HP;
 
     private void OnEnable()
     {
         canvas = GetComponent<Canvas>();
+    }
+
+    public void SetHP(int value)
+    {
+        if(this.HP!=null)
+        {
+            this.HP.value = value;
+        }
+    }
+
+    public void SetMaxHP(int value)
+    {
+        if(this.HP!=null)
+        {
+            this.HP.maxValue = value;
+        }
     }
 
     public void SetEnergy(int energy)

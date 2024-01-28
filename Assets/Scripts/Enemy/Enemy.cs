@@ -23,8 +23,15 @@ public class Enemy : MonoBehaviour
     public void Awake()
     {
         animator = GetComponent<Animator>();
+        UIManager.Instance.SetHP(hp);
+        UIManager.Instance.SetMaxHP(maxHp);
     }
 
+    public void Update()
+    {
+        UIManager.Instance.SetHP(hp);
+        UIManager.Instance.SetMaxHP(maxHp);
+    }
 
     public void SetMaxHealth(int hp)
     {
