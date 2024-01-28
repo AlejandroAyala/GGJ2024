@@ -16,10 +16,12 @@ MonoBehaviour:
   cardDescriptions:
   - Even a log is more flexible
   energyCost: 1
-  cardType: {fileID: 11400000, guid: ce5819be37e728d43b51c7ea8c001e2f, type: 2}
+  cardType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
   cardImage: {fileID: 508860661, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Next Physical Comedy card does 2x damage
     type: 3
     applyAmmount: 200
     applyType: 1
+    delay: 0
+    affectedType: {fileID: 0}
