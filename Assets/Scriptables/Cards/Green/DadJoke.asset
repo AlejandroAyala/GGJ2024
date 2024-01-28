@@ -34,3 +34,4 @@ MonoBehaviour:
     delay: 0
     affectedType: {fileID: 11400000, guid: f249006b8fbcd2844ad853ecd4b590cb, type: 2}
     block: 1
+  animation_trigger: j_dadjoke

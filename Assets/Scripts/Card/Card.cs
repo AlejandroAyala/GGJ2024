@@ -69,7 +69,8 @@ public class Card : MonoBehaviour
         {
             if (Player.Instance.energy >= cardInfo.energyCost)
             {
-                Player.Instance.energy -= cardInfo.energyCost;
+				Player.Instance.animator.SetTrigger(cardInfo.animation_trigger);
+				Player.Instance.energy -= cardInfo.energyCost;
                 foreach (CardEffect ce in cardInfo.cardEffects)
                 {
                     ce.DoEffect();
