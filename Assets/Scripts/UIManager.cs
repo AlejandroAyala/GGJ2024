@@ -18,6 +18,7 @@ public class UIManager : Singleton<UIManager>
     private void OnEnable()
     {
         canvas = GetComponent<Canvas>();
+        GameManager.Instance.Battle();
     }
 
     public void SetHP(int value)

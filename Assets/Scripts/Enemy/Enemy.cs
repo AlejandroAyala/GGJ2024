@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = System.Random;
 
 public class Enemy : MonoBehaviour
@@ -31,6 +32,10 @@ public class Enemy : MonoBehaviour
     {
         UIManager.Instance.SetHP(hp);
         UIManager.Instance.SetMaxHP(maxHp);
+        if(hp <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void SetMaxHealth(int hp)

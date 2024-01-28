@@ -19,14 +19,6 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     public List<CardTypeScriptable> locks = new List<CardTypeScriptable>();
 
-    public void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F4))
-        {
-            Battle();
-        }
-    }
-
     public void SetBuffNextCard(CardEffect cardEffect)
     {
         buffNextCard = cardEffect;
@@ -47,7 +39,6 @@ public class GameManager : Singleton<GameManager>
     public new void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this);
         string[] cards = AssetDatabase.FindAssets($"t:{nameof(CardScriptable)}");
         foreach(string card in cards)
         {
