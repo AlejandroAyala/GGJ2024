@@ -6,9 +6,17 @@ public class CrowdAnimator : MonoBehaviour
 {
 
     public Animator animator;
+    public SpriteRenderer r;
+    public List<Sprite> sprites = new List<Sprite>();
 
     public void Awake()
     {
+        r = GetComponent<SpriteRenderer>();
+        if (sprites.Count != 0)
+        {
+            int i = Random.Range(0,sprites.Count-1);
+            r.sprite = sprites[i];
+        }
         animator = GetComponent<Animator>();
         StartCoroutine(WaitRandom());
     }
