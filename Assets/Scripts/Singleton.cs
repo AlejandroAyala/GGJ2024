@@ -14,14 +14,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             if (_instance == null)
             {
                 GameObject g = new GameObject(typeof(T).Name);
-                DontDestroyOnLoad(g);
                 g.AddComponent<T>();
             }
             return _instance;
         }
     }
 
-    private void Awake()
+    public void Awake()
     {
         if (!_instance)
         {

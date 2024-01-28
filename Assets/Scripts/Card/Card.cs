@@ -77,7 +77,7 @@ public class Card : MonoBehaviour
     public void MoveCard()
     {
         ogPos = transform.position;
-        transform.position = new Vector3(ogPos.x, ogPos.y, ogPos.z)+(Vector3.up*200f);
+        transform.position = new Vector3(ogPos.x, ogPos.y, ogPos.z)+(Vector3.up*300f);
     }
 
     public void ResetCardPosition()

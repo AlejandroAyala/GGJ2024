@@ -21,6 +21,13 @@ public class GameManager : Singleton<GameManager>
     private List<StartingDeck> startingDecks = new List<StartingDeck>();
     private Queue<CardEffect> queuedEffects = new Queue<CardEffect>();
 
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F4))
+        {
+            Battle();
+        }
+    }
 
     public void SetBuffNextCard(CardTypeScriptable cardEffect)
     {
@@ -32,9 +39,10 @@ public class GameManager : Singleton<GameManager>
         queuedEffects.Enqueue(cardEffect);
     }
 
-    public void Awake()
+    public new void Awake()
     {
-        GameObject.DontDestroyOnLoad(this.gameObject);
+        base.Awake();
+        DontDestroyOnLoad(this);
         string[] cards = AssetDatabase.FindAssets($"t:{nameof(CardScriptable)}");
         foreach(string card in cards)
         {
@@ -58,6 +66,8 @@ public class GameManager : Singleton<GameManager>
             startingDecks.Add(c);
         }
     }
+
+
 
     public CardScriptable GetCommandCardByName(string v)
     {
