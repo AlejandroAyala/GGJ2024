@@ -16,10 +16,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private Enemy currentEnemy;
     private bool isInBattle;
-    private CardTypeScriptable buffNextCard;
+    private CardEffect buffNextCard;
     private Player player;
     private List<StartingDeck> startingDecks = new List<StartingDeck>();
     private Queue<CardEffect> queuedEffects = new Queue<CardEffect>();
+    [SerializeField]
+    public List<CardTypeScriptable> locks = new List<CardTypeScriptable>();
 
     public void Update()
     {
@@ -29,9 +31,16 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void SetBuffNextCard(CardTypeScriptable cardEffect)
+    public void SetBuffNextCard(CardEffect cardEffect)
     {
         buffNextCard = cardEffect;
+    }
+
+    public CardEffect GetCurrentBuff()
+    {
+        CardEffect retVal = buffNextCard;
+        buffNextCard = null;
+        return retVal;
     }
 
     public void ApplyEffectNextTurn(CardEffect cardEffect)
@@ -67,7 +76,27 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    internal void RemoveLock(CardTypeScriptable affectedType)
+    {
+        for(int i = 0; i<locks.Count;i++)
+        {
+            if (locks[i]== affectedType)
+            {
+                locks.RemoveAt(i);
+                break;
+            }
+        }
+    }
 
+    internal bool GetLock(CardTypeScriptable cardType)
+    {
+        return locks.Where((x) => { return x == cardType; }).FirstOrDefault() != null;
+    }
+
+    public void AddLock(CardTypeScriptable c)
+    {
+        locks.Add(c);
+    }
 
     public CardScriptable GetCommandCardByName(string v)
     {

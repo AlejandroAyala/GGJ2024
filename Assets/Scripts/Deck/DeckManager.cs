@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
 using System.Linq;
 
 public class DeckManager : Singleton<DeckManager>
@@ -14,6 +13,7 @@ public class DeckManager : Singleton<DeckManager>
     private List<Card> activeHand = new List<Card>();
     [SerializeField]
     private List<CardScriptable> discardPile = new List<CardScriptable>();
+    public int maxHandCards = 7;
 
     public void Update()
     {
@@ -32,10 +32,16 @@ public class DeckManager : Singleton<DeckManager>
 
     public void DrawCards(int ammount)
     {
-        ammount = Mathf.Min(ammount, currentBattleDeck.Count);
+        int allowedCards = maxHandCards - activeHand.Count;
+        ammount = Mathf.Min(allowedCards, currentBattleDeck.Count, ammount);
         for (int i = 0; i < ammount; i++)
         {
             Card c = UIManager.Instance.InstantiateCard(currentBattleDeck[0]);
+            CardEffect blockEffect = c.cardInfo.cardEffects.Where((x) => { return x.type == CardType.BLOCK_CARD; }).FirstOrDefault();
+            if (blockEffect != null)
+            {
+                GameManager.Instance.AddLock(blockEffect.affectedType);
+            }
             activeHand.Add(c);
             currentBattleDeck.RemoveAt(0);
         }
@@ -60,9 +66,7 @@ public class DeckManager : Singleton<DeckManager>
 
     public void ShuffleDeck()
     {
-        Random random = new();
-        currentBattleDeck = currentBattleDeck.OrderBy(x => random.Next()).ToList();
-        random = null;
+        currentBattleDeck = currentBattleDeck.OrderBy(x => Random.Range(0,10000)).ToList();
     }
 
     public void OrderDeck()
@@ -73,6 +77,14 @@ public class DeckManager : Singleton<DeckManager>
     public void AddCardToDeck(CardScriptable card)
     {
         playerDeck.Add(card);
+    }
+
+    public void AddCardsToDeck(CardScriptable card, int ammount)
+    {
+        for(int i = 0; i < ammount; i++)
+        {
+            playerDeck.Add(card);
+        }        
     }
 
     public void AddBattleCardToDeck(CardScriptable card)
@@ -86,9 +98,11 @@ public class DeckManager : Singleton<DeckManager>
         int discard = Mathf.Min(ableToDiscard.Count, x);
         for (int i = 0; i < discard; i++)
         { 
-            int randIdx = UnityEngine.Random.Range(0, ableToDiscard.Count-1);
+            int randIdx = Random.Range(0, ableToDiscard.Count-1);
             Card card = ableToDiscard[randIdx];
-            RemoveFromHand(card);
+            RemoveFromHand(card);            
+            AddToDiscardPile(card.cardInfo);
+            UIManager.Instance.ReturnCardToQueue(card);
         }
     }
 
@@ -102,16 +116,23 @@ public class DeckManager : Singleton<DeckManager>
 
         for(int i = 0; i < startingDeck.startingCards.Count; i++)
         {
-            for(int j = 0; j < startingDeck.cardQuantity[i]; j++)
-            {
-                playerDeck.Add(startingDeck.startingCards[j]);
-            }
+            AddCardsToDeck(startingDeck.startingCards[i], startingDeck.cardQuantity[i]);
         }
     }
 
     public void AddBattleCardToHand(CardScriptable card)
     {
+        if(activeHand.Count >= maxHandCards)
+        {
+            int discardAmmount = (activeHand.Count - maxHandCards) + 1;
+            DiscardRandomCards(discardAmmount);
+        }
         Card c = UIManager.Instance.InstantiateCard(card);
+        CardEffect blockEffect = card.cardEffects.Where((x) => { return x.type == CardType.BLOCK_CARD; }).FirstOrDefault();
+        if (blockEffect != null)
+        {
+            GameManager.Instance.AddLock(blockEffect.affectedType);
+        }
         activeHand.Add(c);
     }
 }

@@ -26,8 +26,6 @@ public class Card : MonoBehaviour
     public Vector3 ogPos;
     public Vector3 target;
 
-    public Coroutine currentC;
-
     private void Awake()
     {
         button = GetComponent<UnityEngine.UI.Button>();
@@ -52,6 +50,7 @@ public class Card : MonoBehaviour
         if(damageEffect != null)
         {
             damage.text = damageEffect.applyAmmount.ToString();
+            damage.transform.parent.gameObject.SetActive(true);
         }
         else
         {
@@ -65,19 +64,22 @@ public class Card : MonoBehaviour
 
     public void PlayCard()
     {
-        if(Player.Instance.energy >= cardInfo.energyCost)
+        //check locks
+        if(!GameManager.Instance.GetLock(cardInfo.cardType))
         {
-            Player.Instance.energy -= cardInfo.energyCost;
-            foreach (CardEffect ce in cardInfo.cardEffects)
+            if (Player.Instance.energy >= cardInfo.energyCost)
             {
-                ce.DoEffect();
+                Player.Instance.energy -= cardInfo.energyCost;
+                foreach (CardEffect ce in cardInfo.cardEffects)
+                {
+                    ce.DoEffect();
+                }
+                DeckManager.Instance.RemoveFromHand(this);
+                //play animation
+                DeckManager.Instance.AddToDiscardPile(cardInfo);
+                UIManager.Instance.ReturnCardToQueue(this);
             }
-            DeckManager.Instance.RemoveFromHand(this);
-            //play animation
-            DeckManager.Instance.AddToDiscardPile(cardInfo);
-            UIManager.Instance.ReturnCardToQueue(this);
         }
-        //TODO: do something when no energy
     }
 
     public void MoveCard()

@@ -15,13 +15,27 @@ public class CardEffect
 
     public void DoEffect()
     {
+        CardEffect buff = GameManager.Instance.GetCurrentBuff();
         switch (type)
         {
             case CardType.DAMAGE:
-                GameManager.Instance.GetEnemy().TakeDamage(applyAmmount, block);
+                int newApply = applyAmmount;
+                if(buff != null && buff.affectedType == affectedType)
+                {
+                    switch(buff.applyType)
+                    {
+                        case ApplyType.FLAT:
+                            newApply = newApply + buff.applyAmmount;
+                            break;
+                        case ApplyType.PERCENTAGE:
+                            newApply = newApply * (buff.applyAmmount / 100);
+                            break;
+                    }
+                }
+                GameManager.Instance.GetEnemy().TakeDamage(newApply, block);
                 break;
             case CardType.BUFF_CARD:
-                GameManager.Instance.SetBuffNextCard(affectedType);
+                GameManager.Instance.SetBuffNextCard(this);
                 break;
             case CardType.BUFF_COUNTER:
                 GameManager.Instance.GetEnemy().BlockNextCommand();
@@ -41,6 +55,9 @@ public class CardEffect
                         GameManager.Instance.ApplyEffectNextTurn(c);
                         break;
                 }
+                break;
+            case CardType.BLOCK_CARD:
+                GameManager.Instance.RemoveLock(affectedType);
                 break;
         }
     }
