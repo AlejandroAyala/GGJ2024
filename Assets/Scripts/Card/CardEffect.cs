@@ -29,7 +29,7 @@ public class CardEffect
                 switch(delay)
                 {
                     case ApplyDelay.IMMEDIATE:
-                        GameManager.Instance.GetPlayer().AddEnergy(applyAmmount);
+                        Player.Instance.AddEnergy(applyAmmount);
                         break;
                     case ApplyDelay.NEXT_TURN:
                         CardEffect c = new CardEffect();

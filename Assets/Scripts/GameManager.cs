@@ -17,31 +17,8 @@ public class GameManager : Singleton<GameManager>
     private bool isInBattle;
     private CardTypeScriptable buffNextCard;
     private Player player;
+    private List<StartingDeck> startingDecks = new List<StartingDeck>();
 
-    public void Update()
-    {
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            DeckManager.Instance.ShuffleDeck();
-        }
-        if(Input.GetKeyUp(KeyCode.F4))
-        {
-            DeckManager.Instance.GenerateRandomDeck(15);
-        }
-        if (Input.GetKeyUp(KeyCode.Return))
-        {
-            DeckManager.Instance.DrawCards(1);
-        }
-        if(Input.GetKeyUp(KeyCode.F12))
-        {
-            Battle();
-        }
-    }
-
-    internal Player GetPlayer()
-    {
-        return player;
-    }
 
     internal void SetBuffNextCard(CardTypeScriptable cardEffect)
     {
@@ -53,10 +30,9 @@ public class GameManager : Singleton<GameManager>
         throw new System.NotImplementedException();
     }
 
-    public void OnEnable()
+    public void Awake()
     {
         string[] cards = AssetDatabase.FindAssets($"t:{nameof(CardScriptable)}");
-        player = new GameObject().AddComponent<Player>();
         foreach(string card in cards)
         {
             string path = AssetDatabase.GUIDToAssetPath(card);
@@ -71,6 +47,14 @@ public class GameManager : Singleton<GameManager>
                 allCards.Add(c);
             }
         }
+        string[] decks = AssetDatabase.FindAssets($"t:{nameof(StartingDeck)}");
+        foreach (string deck in decks)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(deck);
+            StartingDeck c = AssetDatabase.LoadAssetAtPath<StartingDeck> (path);
+            startingDecks.Add(c);
+        }
+
     }
 
     public List<CardScriptable> GetAllCards()
