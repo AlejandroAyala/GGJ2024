@@ -16,8 +16,10 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         //Play animation
-        transition.SetTrigger("Start");
-        //Wait
+        if (transition != null)
+        {
+            transition.SetTrigger("Start");
+        }//Wait
         yield return new WaitForSeconds(1);
         //LoadScene
         SceneManager.LoadScene(levelIndex);

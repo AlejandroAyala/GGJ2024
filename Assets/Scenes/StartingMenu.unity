@@ -766,6 +766,38 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1520351133}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788657013443008602, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8788657013443008676, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
       propertyPath: m_Name
       value: Button_Rectangle01_Gray (1)
@@ -865,8 +897,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8788657013443008676, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1520351133}
   m_SourcePrefab: {fileID: 100100000, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+--- !u!1 &1520351132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8788657013443008676, guid: 018947ce1abc14047b699d7e8fdcf673, type: 3}
+  m_PrefabInstance: {fileID: 1520351131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520351133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520351132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccd142024dccad4590b75bcb4325261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 1414071836}
 --- !u!1 &1522568045
 GameObject:
   m_ObjectHideFlags: 0
