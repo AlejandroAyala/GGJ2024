@@ -19,7 +19,6 @@ public class UIManager : Singleton<UIManager>
     private void OnEnable()
     {
         canvas = GetComponent<Canvas>();
-        GameManager.Instance.Battle();
         nexTurn.onClick.AddListener(GameManager.Instance.EndPlayerTurn);
     }
 

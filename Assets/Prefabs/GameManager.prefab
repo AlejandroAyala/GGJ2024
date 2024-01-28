@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8939203859711293108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1142260341305321373}
+  - component: {fileID: 8354279078977262995}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1142260341305321373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939203859711293108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 620.4817, y: 324.3902, z: -60.72412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8354279078977262995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939203859711293108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e470ac8e225474ab856bf98aef853d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCards:
+  - {fileID: 11400000, guid: 4f4a3b10c7b76834c99daf4c39aa8fa2, type: 2}
+  - {fileID: 11400000, guid: d0e523069e123424cbf225cd448bf430, type: 2}
+  - {fileID: 11400000, guid: 544b1d007c6bb7145bedb6ab0776d173, type: 2}
+  - {fileID: 11400000, guid: cfbbd6987669aa0479ca4a6dbe6f7159, type: 2}
+  - {fileID: 11400000, guid: cdcc88580e0a13541b5b7fc22e1d647c, type: 2}
+  - {fileID: 11400000, guid: 968b4906b07d4044d8a449dc09c2636b, type: 2}
+  - {fileID: 11400000, guid: d378e6f258020cd4ea123ac4e6dbbd5d, type: 2}
+  - {fileID: 11400000, guid: 50975a2ca07b07d40b17570b7c727b6f, type: 2}
+  - {fileID: 11400000, guid: bfb453630bb2c7d4aaa86dff43628af9, type: 2}
+  - {fileID: 11400000, guid: e088aeea041e6f84e9f08ed06b84851d, type: 2}
+  - {fileID: 11400000, guid: 3c11fd237c3690c4db527026f77454d7, type: 2}
+  - {fileID: 11400000, guid: 62b2540eb20d31d44857ef0ce5a093d1, type: 2}
+  - {fileID: 11400000, guid: c2cfec709323ed9458c0763440aee02c, type: 2}
+  - {fileID: 11400000, guid: ef7ea451fa0b8ab4d8779e295da85c24, type: 2}
+  - {fileID: 11400000, guid: 7e28ebe823910a843b54953bf5bf2db1, type: 2}
+  - {fileID: 11400000, guid: b9e381852009a7642803ea76afc98b51, type: 2}
+  commandCards:
+  - {fileID: 11400000, guid: 34bb8787c6b7ae041be17b27f3e9cc84, type: 2}
+  - {fileID: 11400000, guid: 7e0d21bb7cf250346965a6a03924ef91, type: 2}
+  - {fileID: 11400000, guid: e7df125510b08b5449c4379302995c04, type: 2}
+  - {fileID: 11400000, guid: 46e515b3199c55c40b40816be48681b9, type: 2}
+  currentEnemy: {fileID: 0}
+  startingDecks:
+  - {fileID: 11400000, guid: 06accccc4052f9f43929c3379964af4b, type: 2}
+  locks: []

@@ -6,15 +6,16 @@ using UnityEditor;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
-    private List<CardScriptable> allCards = new List<CardScriptable>();
+    private List<CardScriptable> allCards;
     [SerializeField]
-    private List<CardScriptable> commandCards = new List<CardScriptable>();
+    private List<CardScriptable> commandCards;
     [SerializeField]
     private Enemy currentEnemy;
     private bool isInBattle;
     private CardEffect buffNextCard;
     private Player player;
-    private List<StartingDeck> startingDecks = new List<StartingDeck>();
+    [SerializeField]
+    private List<StartingDeck> startingDecks;
     private Queue<CardEffect> queuedEffects = new Queue<CardEffect>();
     [SerializeField]
     public List<CardTypeScriptable> locks = new List<CardTypeScriptable>();
@@ -36,30 +37,11 @@ public class GameManager : Singleton<GameManager>
         queuedEffects.Enqueue(cardEffect);
     }
 
-    public new void Awake()
+    private void Update()
     {
-        base.Awake();
-        string[] cards = AssetDatabase.FindAssets($"t:{nameof(CardScriptable)}");
-        foreach(string card in cards)
+        if(!isInBattle)
         {
-            string path = AssetDatabase.GUIDToAssetPath(card);
-            CardScriptable c = AssetDatabase.LoadAssetAtPath<CardScriptable>(path);
-            bool isCommand = c.cardEffects.Where((effect) => { return effect.type == CardType.COMMAND; }).FirstOrDefault() != null;
-            if(isCommand)
-            {
-                commandCards.Add(c);
-            }
-            else
-            {
-                allCards.Add(c);
-            }
-        }
-        string[] decks = AssetDatabase.FindAssets($"t:{nameof(StartingDeck)}");
-        foreach (string deck in decks)
-        {
-            string path = AssetDatabase.GUIDToAssetPath(deck);
-            StartingDeck c = AssetDatabase.LoadAssetAtPath<StartingDeck> (path);
-            startingDecks.Add(c);
+            Battle();
         }
     }
 
