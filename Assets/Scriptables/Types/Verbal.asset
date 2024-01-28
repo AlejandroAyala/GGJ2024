@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Verbal
   m_EditorClassIdentifier: 
   typeName: Verbal Comedy
-  cardColor: {r: 0, g: 1, b: 0.058823586, a: 1}
+  cardColor: {r: 0.2778568, g: 0.8415094, b: 0.31101286, a: 1}
