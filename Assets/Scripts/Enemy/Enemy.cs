@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Enemy : MonoBehaviour
     private int hp;
     [SerializeField]
     private int maxHp;
+    private EnemyBlocks nextBlock = EnemyBlocks.BLOCK_GREEN;
+    private EnemyCommands nextCommand = EnemyCommands.NONE;
 
     public void SetMaxHealth(int hp)
     {
@@ -21,8 +24,12 @@ public class Enemy : MonoBehaviour
         this.hp = hp;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, EnemyBlocks blockType)
     {
+        if (blockType == nextBlock)
+        {
+            return;
+        }
         hp -= damage;
         hp = Mathf.Max(0, hp);
     }
@@ -35,6 +42,15 @@ public class Enemy : MonoBehaviour
 
     internal void BlockNextCommand()
     {
-        throw new NotImplementedException();
+        nextCommand = EnemyCommands.NONE;
+    }
+
+    void ChooseActions()
+    {
+        Random r = new Random();
+        var v = Enum.GetValues(typeof(EnemyCommands));
+        nextCommand = (EnemyCommands)v.GetValue(r.Next(v.Length-1));
+        v = Enum.GetValues(typeof(EnemyBlocks));
+        nextBlock = (EnemyBlocks)v.GetValue(r.Next(v.Length));
     }
 }

@@ -20,6 +20,9 @@ MonoBehaviour:
   cardImage: {fileID: 1279751601, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Block a King's Command
-    type: 5
+    type: 3
     applyAmmount: 1
     applyType: 0
+    delay: 0
+    affectedType: {fileID: 0}
+    block: 0

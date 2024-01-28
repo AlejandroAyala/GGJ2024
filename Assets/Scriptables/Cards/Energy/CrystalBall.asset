@@ -21,6 +21,9 @@ MonoBehaviour:
   cardImage: {fileID: 1116187169, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Adds 1 energy
-    type: 4
+    type: 2
     applyAmmount: 1
     applyType: 0
+    delay: 0
+    affectedType: {fileID: 0}
+    block: 0

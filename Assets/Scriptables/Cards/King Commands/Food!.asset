@@ -20,12 +20,9 @@ MonoBehaviour:
   cardImage: {fileID: 311992045, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Play this card to vanish it from the deck
-    type: 6
+    type: 4
     applyAmmount: 0
     applyType: 0
     delay: 0
-  - description: While this card is in the hand you cannot play red cards.
-    type: 7
-    applyAmmount: 0
-    applyType: 0
-    delay: 0
+    affectedType: {fileID: 0}
+    block: 0

@@ -20,8 +20,9 @@ MonoBehaviour:
   cardImage: {fileID: -308171032, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Next Magic Trick card does 2x damage
-    type: 2
+    type: 1
     applyAmmount: 200
     applyType: 1
     delay: 0
-    affectedType: {fileID: 0}
+    affectedType: {fileID: 11400000, guid: 6b16ff2cd7fc9f844bdbae7bad544a55, type: 2}
+    block: 0

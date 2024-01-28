@@ -22,7 +22,9 @@ MonoBehaviour:
   cardImage: {fileID: -1411563891, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Next turn, gain 1 Energy
-    type: 4
+    type: 2
     applyAmmount: 1
     applyType: 0
     delay: 1
+    affectedType: {fileID: 0}
+    block: 0

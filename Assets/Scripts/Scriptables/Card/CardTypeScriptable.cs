@@ -7,4 +7,5 @@ public class CardTypeScriptable : ScriptableObject
 {
     public string typeName;
     public Color cardColor;
+    public EnemyBlocks colorBlock;
 }

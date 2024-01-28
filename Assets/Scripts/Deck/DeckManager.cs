@@ -75,5 +75,17 @@ public class DeckManager : Singleton<DeckManager>
         currentBattleDeck.Add(card);
     }
 
+    public void DiscardRandomCards(int x)
+    {
+        if(activeHand.Count >= x)
+        {
+            for (int i = 0; i < x; i++)
+            { 
+                int randIdx = UnityEngine.Random.Range(0,activeHand.Count-1);
+                Card card = activeHand[randIdx];
+                RemoveFromHand(card);
+            }
+        }
+    }
 
 }

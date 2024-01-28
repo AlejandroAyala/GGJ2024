@@ -20,8 +20,9 @@ MonoBehaviour:
   cardImage: {fileID: 508860661, guid: 2921bf68b33c856448330ea893c66b5f, type: 3}
   cardEffects:
   - description: Next Physical Comedy card does 2x damage
-    type: 3
+    type: 1
     applyAmmount: 200
     applyType: 1
     delay: 0
-    affectedType: {fileID: 0}
+    affectedType: {fileID: 11400000, guid: e7478dbed387be94ab19644ad5e1c43f, type: 2}
+    block: 2

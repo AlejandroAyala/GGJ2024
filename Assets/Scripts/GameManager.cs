@@ -19,6 +19,8 @@ public class GameManager : Singleton<GameManager>
     private Player player;
     private List<StartingDeck> startingDecks = new List<StartingDeck>();
 
+    private Queue<CardEffect> queuedEffects = new Queue<CardEffect>();
+
 
     internal void SetBuffNextCard(CardTypeScriptable cardEffect)
     {
@@ -27,7 +29,7 @@ public class GameManager : Singleton<GameManager>
 
     internal void ApplyEffectNextTurn(CardEffect cardEffect)
     {
-        throw new System.NotImplementedException();
+        queuedEffects.Enqueue(cardEffect);
     }
 
     public void Awake()
