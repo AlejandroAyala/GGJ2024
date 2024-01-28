@@ -53,4 +53,36 @@ public class Enemy : MonoBehaviour
         v = Enum.GetValues(typeof(EnemyBlocks));
         nextBlock = (EnemyBlocks)v.GetValue(r.Next(v.Length));
     }
+
+    public void DoActions()
+    {
+        switch(nextCommand)
+        {
+            case EnemyCommands.NONE:
+                break;
+            case EnemyCommands.LIGHT_HEAL:
+                Heal(5);
+                break;
+            case EnemyCommands.MEDIUM_HEAL:
+                Heal(10);
+                break;
+            case EnemyCommands.HARD_HEAL:
+                Heal(15);
+                break;
+            case EnemyCommands.GUARDS:
+                CardScriptable c = GameManager.Instance.GetCommandCardByName("Guards!");
+                DeckManager.Instance.AddBattleCardToDeck(c);
+                break;
+            case EnemyCommands.FOOD:
+                break;
+            case EnemyCommands.HERECY:
+                break;
+            case EnemyCommands.ORDER:
+                break;
+            case EnemyCommands.SILENCE:
+                break;
+        }
+        
+        ChooseActions();
+    }
 }
