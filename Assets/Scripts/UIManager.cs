@@ -14,11 +14,13 @@ public class UIManager : Singleton<UIManager>
     public TMPro.TextMeshProUGUI deckAmmount;
     public TMPro.TextMeshProUGUI discardAmmount;
     public Slider HP;
+    public Button nexTurn;
 
     private void OnEnable()
     {
         canvas = GetComponent<Canvas>();
         GameManager.Instance.Battle();
+        nexTurn.onClick.AddListener(GameManager.Instance.EndPlayerTurn);
     }
 
     public void SetHP(int value)

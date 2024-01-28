@@ -593,6 +593,7 @@ MonoBehaviour:
   deckAmmount: {fileID: 1183987546}
   discardAmmount: {fileID: 1151701631}
   HP: {fileID: 1859982856}
+  nexTurn: {fileID: 614558850}
 --- !u!1 &343816571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1129,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3021933356779725053, guid: bafa083cebd8a44b3a2ea74ef38ae939, type: 3}
   m_PrefabInstance: {fileID: 614558848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &614558850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3021933356779725052, guid: bafa083cebd8a44b3a2ea74ef38ae939, type: 3}
+  m_PrefabInstance: {fileID: 614558848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &622416433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2616,39 +2628,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7853521673368815228, guid: d8faac7d4e1ed8a4f9dd83a13fed0ebb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1692499750}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8faac7d4e1ed8a4f9dd83a13fed0ebb, type: 3}
 --- !u!4 &1653975297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2096536316139753199, guid: d8faac7d4e1ed8a4f9dd83a13fed0ebb, type: 3}
-  m_PrefabInstance: {fileID: 1653975296}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1692499746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7853521673368815228, guid: d8faac7d4e1ed8a4f9dd83a13fed0ebb, type: 3}
-  m_PrefabInstance: {fileID: 1653975296}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1692499750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692499746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92af8aa6d4049bf41817e793caa51bd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energy: 3
-  maxEnergy: 3
-  animator: {fileID: 1692499751}
---- !u!95 &1692499751 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 88449546596314813, guid: d8faac7d4e1ed8a4f9dd83a13fed0ebb, type: 3}
   m_PrefabInstance: {fileID: 1653975296}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1756837794

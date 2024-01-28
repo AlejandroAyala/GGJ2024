@@ -97,7 +97,8 @@ public class GameManager : Singleton<GameManager>
 
 
     public void Battle()
-    {        
+    {
+        GameObject.FindWithTag("Player").AddComponent<Player>();
         DeckManager.Instance.SetStartingDeck(startingDecks[UnityEngine.Random.Range(0, startingDecks.Count - 1)]);
         DeckManager.Instance.CreateBattleDeck();
         DeckManager.Instance.ShuffleDeck();
