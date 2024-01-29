@@ -10,7 +10,7 @@ public class Player : Singleton<Player>
     public int maxEnergy = 3;
     public Animator animator;
 
-    public void Awake()
+    public new void Awake()
     {
         base.Awake();
         animator = GetComponent<Animator>();
