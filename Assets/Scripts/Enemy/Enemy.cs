@@ -57,15 +57,16 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        StartCoroutine(KingLaugh());
-
-        hp -= damage;
-        hp = Mathf.Max(0, hp);
+        StartCoroutine(KingLaugh(damage));
     }
-    IEnumerator KingLaugh()
+    IEnumerator KingLaugh(int damage)
     {
         yield return new WaitForSeconds(2);
         animator.SetTrigger("k_laugh");
+
+        //hp -= 1 * Mathf.RoundToInt(Time.deltaTime);
+        hp -= damage;
+        hp = Mathf.Max(0, hp);
     }
 
     public void Heal(int ammount)
@@ -136,21 +137,21 @@ public class Enemy : MonoBehaviour
                 Debug.Log(currentBlock);
                 shield.gameObject.SetActive(true);
                 color = Color.blue;
-                color.a = .2f;
+                color.a = .5f;
                 animator.SetTrigger("k_drink");
                 break;
             case EnemyBlocks.BLOCK_GREEN:
                 Debug.Log(currentBlock);
                 shield.gameObject.SetActive(true);
                 color = Color.green;
-                color.a = .2f;
+                color.a = .5f;
                 animator.SetTrigger("k_talkhand");
                 break;
             case EnemyBlocks.BLOCK_RED:
                 Debug.Log(currentBlock);
                 shield.gameObject.SetActive(true);
                 color = Color.red;
-                color.a = .2f;
+                color.a = .5f;
                 animator.SetTrigger("k_lookaway");
                 break;
             case EnemyBlocks.NONE:
