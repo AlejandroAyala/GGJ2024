@@ -86,6 +86,7 @@ public class Card : MonoBehaviour
                     DeckManager.Instance.AddToDiscardPile(cardInfo);
                 }
                 UIManager.Instance.ReturnCardToQueue(this);
+                DeckManager.Instance.lastPlayedCard = cardInfo;
             }
         }
     }

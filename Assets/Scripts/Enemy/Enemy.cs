@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private EnemyCommands nextCommand = EnemyCommands.NONE;
     [SerializeField]
-    private EnemyBlocks currentBlock = EnemyBlocks.NONE;
+    public EnemyBlocks currentBlock = EnemyBlocks.NONE;
     private SpriteRenderer shield;
     public Animator animator;
 
@@ -57,14 +57,6 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        StartCoroutine(KingLaugh(damage));
-    }
-    IEnumerator KingLaugh(int damage)
-    {
-        yield return new WaitForSeconds(2);
-        animator.SetTrigger("k_laugh");
-
-        //hp -= 1 * Mathf.RoundToInt(Time.deltaTime);
         hp -= damage;
         hp = Mathf.Max(0, hp);
     }
