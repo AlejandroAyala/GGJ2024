@@ -14,7 +14,8 @@ public class DeckManager : Singleton<DeckManager>
     [SerializeField]
     private List<CardScriptable> discardPile = new List<CardScriptable>();
     public int maxHandCards = 7;
-
+    [SerializeField]
+    public CardScriptable lastPlayedCard;
     public void Update()
     {
         UIManager.Instance.SetDeckAmmount(currentBattleDeck.Count);
